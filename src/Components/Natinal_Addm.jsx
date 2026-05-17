@@ -83,66 +83,66 @@ const Natinal_Addm = () => {
    ];
 
    return (
-      <section className="mt-12" id="nat_add">
-         <Container>
-            <div className="flex flex-col sm:flex-row items-start justify-between gap-5">
-               <div className="p-4 w-[580px]">
-                  <div>
-                      <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            <h2 className="font-rob font-medium text-2xl tracking-[0.02em]">National</h2>
-                            <div className="w-[250px] sm:w-[320px] h-px bg-[#919191]"></div>
-                          </div>
-
-                        <div className="hidden sm:flex items-center gap-1 hover:text-blue-500 transition-all duration-200">
-                          <a href="#nat_add" className="font-rob font-normal text-[14px] leading-3.5 ">Read More</a>
-                        <MdOutlineArrowOutward />
-                        </div>
-                     </div>
-                     <div className="mt-6">
-                        {nTopHeadNews.map((thead, index) => (
-                           <TopHead key={index} tHead={thead} />
-                        ))}
-                     </div>
-                  </div>
-
-                  <div className="mt-6">
-                     {nBottomHeadNews.map((bhead, index) => (
-                        <OtherHead key={index} bHead={bhead} />
-                     ))}
-                  </div>
-               </div>
-
-               <div className="w-px h-auto bg-black"></div>
-
-               <div className="p-4 w-[580px]">
-                  <div>
-                     <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            <h2 className="font-rob font-medium text-2xl tracking-[0.02em]">Administration</h2>
-                            <div className="w-[170px] sm:w-60 h-px bg-[#919191]"></div>
-                          </div>
-                        <div className="px-3 hidden sm:flex items-center gap-1  hover:text-blue-500 transition-all duration-200">
-                          <a href="#nat_add" className="font-rob font-normal text-[14px] leading-3.5 ">Read More</a>
-                        <MdOutlineArrowOutward/>
-                        </div>
-                     </div>
-                     <div className="mt-6">
-                        {aTopHeadNews.map((thead, index) => (
-                           <TopHead key={index} tHead={thead} />
-                        ))}
-                     </div>
-                  </div>
-
-                  <div className="mt-6">
-                     {aBottomHeadNews.map((bhead, index) => (
-                        <OtherHead key={index} bHead={bhead} />
-                     ))}
-                  </div>
-               </div>
-            </div>
-         </Container>
-      </section>
+       <section className="mt-12 sm:px-0 px-4" id="nat_add">
+          <Container>
+             <div className="flex flex-col md:flex-row items-start justify-between gap-8">
+                <div className="p-0 sm:p-4 flex-1 w-full">
+                   <div>
+                       <div className="flex items-center justify-between gap-4">
+                           <div className="flex flex-1 items-center gap-2">
+                             <h2 className="font-rob font-medium text-2xl tracking-[0.02em] whitespace-nowrap">National</h2>
+                             <div className="flex-1 h-px bg-[#919191]"></div>
+                           </div>
+ 
+                         <div className="hidden sm:flex items-center gap-1 hover:text-blue-500 transition-all duration-200">
+                           <a href="#nat_add" className="font-rob font-normal text-[14px] leading-3.5 ">Read More</a>
+                         <MdOutlineArrowOutward />
+                         </div>
+                      </div>
+                      <div className="mt-6">
+                         {nTopHeadNews.map((thead, index) => (
+                            <TopHead key={index} tHead={thead} />
+                         ))}
+                      </div>
+                   </div>
+ 
+                   <div className="mt-6">
+                      {nBottomHeadNews.map((bhead, index) => (
+                         <OtherHead key={index} bHead={bhead} />
+                      ))}
+                   </div>
+                </div>
+ 
+                <div className="hidden md:block w-px self-stretch bg-[#DCDCDC]"></div>
+ 
+                <div className="p-0 sm:p-4 flex-1 w-full">
+                   <div>
+                      <div className="flex items-center justify-between gap-4">
+                           <div className="flex flex-1 items-center gap-2">
+                             <h2 className="font-rob font-medium text-2xl tracking-[0.02em] whitespace-nowrap">Administration</h2>
+                             <div className="flex-1 h-px bg-[#919191]"></div>
+                           </div>
+                         <div className="px-3 hidden sm:flex items-center gap-1  hover:text-blue-500 transition-all duration-200">
+                           <a href="#nat_add" className="font-rob font-normal text-[14px] leading-3.5 ">Read More</a>
+                         <MdOutlineArrowOutward/>
+                         </div>
+                      </div>
+                      <div className="mt-6">
+                         {aTopHeadNews.map((thead, index) => (
+                            <TopHead key={index} tHead={thead} />
+                         ))}
+                      </div>
+                   </div>
+ 
+                   <div className="mt-6">
+                      {aBottomHeadNews.map((bhead, index) => (
+                         <OtherHead key={index} bHead={bhead} />
+                      ))}
+                   </div>
+                </div>
+             </div>
+          </Container>
+       </section>
    );
 };
 

@@ -51,7 +51,7 @@ const Footer = () => {
 
                <div className="flex flex-col items-center sm:mt-0 mt-12 mx-auto sm:mx-0">
                   <img src={FootLogo} alt="Foot_img" />
-                  <div className="w-[350px] sm:w-[302px] mt-6 border border-textcol2 rounded-2xl flex flex-col items-center">
+                  <div className="w-full max-w-[350px] sm:w-[302px] mt-6 border border-textcol2 rounded-2xl flex flex-col items-center">
                      <h2 className="mt-3 font-rob font-normal text-[20px] leading-6 text-white">
                         Follow us
                      </h2>

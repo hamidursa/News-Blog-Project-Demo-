@@ -2,27 +2,25 @@ import React from "react";
 import Flex from "./Flex";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 
-const MostReadDis = ({ news, bBorder }) => {
+const MostReadDis = ({ news }) => {
    return (
-      <div className={`w-full mt-6 sm:mt-4 px-0 sm:px-2 flex gap-4 items-center sm:gap-0 sm:block  ${
-            !bBorder ? "border-b" : ""
-         } sm:border-0 border-[#DCDCDC] pb-6 sm:pb-0`}>
-         <img src={news.img} alt={news.head} className="w-[124px] h-[84px] rounded-lg sm:h-auto sm:w-auto" />
-         <div>
-            <h2 className="mt-2 font-rob font-medium text-[16px] sm:text-[20px] text-textcol cursor-pointer hover:text-hvcol transition-all duration-300">
-            {news.head.slice(0,50)} {news.head.length > 50 && "..."}
-         </h2>
+      <div className="w-full mt-4 px-3 flex flex-col gap-2">
+         <img src={news.img} alt={news.head} className="w-full h-[180px] object-cover rounded-lg shrink-0" />
+         <div className="flex-1 min-w-0">
+            <h2 className="mt-2 font-rob font-medium text-[15px] sm:text-[16px] md:text-[18px] leading-snug text-textcol cursor-pointer hover:text-hvcol transition-all duration-300 line-clamp-2 min-h-[44px]">
+               {news.head}
+            </h2>
 
-         <Flex className=" mt-2  items-center gap-2">
-            <h6 className="font-rob text-[14px] normal text-[#515151]">
-               {news.time}
-            </h6>
-            <h6 className="text-[#BD713A] text-[16px]">|</h6>
-            <h6 className="font-rob text-[14px] normal text-[#515151] flex items-center gap-1">
-               <MdOutlineRemoveRedEye />
-               {news.views}
-            </h6>
-         </Flex>
+            <Flex className="mt-2 items-center gap-2">
+               <h6 className="font-rob text-[13px] sm:text-[14px] normal text-[#515151]">
+                  {news.time}
+               </h6>
+               <h6 className="text-[#BD713A] text-[15px]">|</h6>
+               <h6 className="font-rob text-[13px] sm:text-[14px] normal text-[#515151] flex items-center gap-1">
+                  <MdOutlineRemoveRedEye />
+                  {news.views}
+               </h6>
+            </Flex>
          </div>
       </div>
    );

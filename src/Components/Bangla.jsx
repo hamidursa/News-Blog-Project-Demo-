@@ -61,13 +61,13 @@ const Bangla = () => {
    return (
       <section className="pt-10 bg-[#181B22] pb-10 sm:px-0 px-4" id="politics">
          <Container>
-           <div className="flex items-center justify-between">
-             <div className="flex items-center gap-2">
-               <h2 className="font-noto font-medium text-[24px] text-textcol2">
-                  বাংলা
-               </h2>
-               <div className="w-[280px] sm:w-[950px] h-px bg-[#808080]"></div>
-            </div>
+            <div className="flex items-center justify-between gap-4">
+              <div className="flex flex-1 items-center gap-2">
+                <h2 className="font-noto font-medium text-[24px] text-textcol2 whitespace-nowrap">
+                   বাংলা
+                </h2>
+                <div className="flex-1 h-px bg-[#808080]"></div>
+             </div>
             <div className="hidden sm:flex items-center gap-1 text-textcol2 hover:text-blue-400 transition-all duration-200">
                                          <a href="#politics" className="font-noto font-normal text-[14px] leading-3.5 ">আরও পড়ুন</a>
                                        <MdOutlineArrowOutward />

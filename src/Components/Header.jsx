@@ -66,8 +66,8 @@ const Header = () => {
    };
 
    return (
-      <header className="sticky top-0 z-9999">
-         <nav className=" p-4 bg-[#F2F2F2] sm:py-4 shadow-[0px_5px_5px_0px_rgba(0,0,0,0.3)]  relative z-9999">
+      <header className="sticky top-0 z-50 bg-[#F2F2F2] w-full shadow-[0px_5px_5px_0px_rgba(0,0,0,0.3)]">
+         <nav className=" p-4 sm:py-4 relative z-50">
             <Container>
                <Flex className="items-center justify-between relative">
                   <Category menuShow={menuShow} />
@@ -111,49 +111,28 @@ const Header = () => {
                         list={"Administrative"}
                         className="text-[20px] hover:font-medium"
                      />
-                     <span className="flex items-center">
-                        <ListItems
-                           onClick={handleToggleMore}
-                           list={"More"}
-                           className="text-[20px] hover:font-medium"
-                        />
-                        <MdOutlineKeyboardArrowDown
-                           onClick={handleToggleMore}
-                           className={`${
-                              moreShow
-                                 ? "hidden"
-                                 : "cursor-pointer bg-transparent text-black"
-                           }`}
-                        />
-                        <MdOutlineKeyboardArrowUp
-                           onClick={handleToggleMore}
-                           className={`${
-                              moreShow
-                                 ? "cursor-pointer bg-transparent text-black"
-                                 : "hidden"
-                           }`}
-                        />
-                     </span>
-
-                     <span
-                        className={`${
-                           moreShow
-                              ? "w-auto  bg-[#F5F5F5] rounded-xl top-[50px] -right-15 absolute"
-                              : "hidden"
-                        }`}>
-                        <ListItems
-                           list={"Education"}
-                           className="text-[20px] hover:font-medium hover:bg-[#ffffff] hover:rounded-xl px-4 py-1 transition-all duration-300"
-                        />
-                        <ListItems
-                           list={"Health"}
-                           className="text-[20px] hover:font-medium hover:bg-[#ffffff] hover:rounded-xl px-4 py-1 transition-all duration-300"
-                        />
-                        <ListItems
-                           list={"Court & Law"}
-                           className="text-[20px] hover:font-medium hover:bg-[#ffffff] hover:rounded-xl px-4 py-1 transition-all duration-300"
-                        />
-                     </span>
+                     <li className="relative flex items-center gap-1 cursor-pointer list-none">
+                        <span onClick={handleToggleMore} className="flex items-center gap-1 text-[20px] hover:font-medium">
+                           More
+                           {moreShow ? <MdOutlineKeyboardArrowUp className="text-xl" /> : <MdOutlineKeyboardArrowDown className="text-xl" />}
+                        </span>
+                        {moreShow && (
+                           <ul className="absolute top-full right-0 mt-2 w-48 bg-[#F5F5F5] rounded-xl shadow-lg border border-[#DCDCDC] py-2 z-50 flex flex-col gap-1">
+                              <ListItems
+                                 list={"Education"}
+                                 className="text-[18px] hover:font-medium hover:bg-[#ffffff] hover:rounded-xl px-4 py-1 transition-all duration-300"
+                              />
+                              <ListItems
+                                 list={"Health"}
+                                 className="text-[18px] hover:font-medium hover:bg-[#ffffff] hover:rounded-xl px-4 py-1 transition-all duration-300"
+                              />
+                              <ListItems
+                                 list={"Court & Law"}
+                                 className="text-[18px] hover:font-medium hover:bg-[#ffffff] hover:rounded-xl px-4 py-1 transition-all duration-300"
+                              />
+                           </ul>
+                        )}
+                     </li>
                   </ul>
 
                   <div className="flex items-center gap-6">
@@ -165,8 +144,8 @@ const Header = () => {
                            type="text"
                            placeholder="Search Here..."
                            className={`font-rob transition-all duration-300 text-[16px] px-2 py-0.5 bg-white border rounded-xl
-         ${search ? "opacity-100 w-30 sm:w-40" : "opacity-0 w-0 p-0 border-0"}
-      `}
+          ${search ? "opacity-100 w-28 sm:w-40" : "opacity-0 w-0 p-0 border-0"}
+       `}
                         />
 
                         <IoSearchCircleSharp

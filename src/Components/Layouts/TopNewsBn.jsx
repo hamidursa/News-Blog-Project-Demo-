@@ -3,7 +3,7 @@ import Flex from './Flex'
 
 const TopNewsBn = ({topnewsb}) => {
   return (
-    <div className="w-[380px] sm:w-[628px] px-2 sm:px-0">
+    <div className="w-full sm:w-[628px] max-w-full px-2 sm:px-0">
          <img src={topnewsb.img} alt={topnewsb.head} className="rounded-xl mt-6" />
          <Flex className="flex-col gap-2">
             <h4 className="font-noto text-[16px] sm:text-2xl font-semibold leading-5 sm:leading-6 text-textcol2 sm:text-[#EC8D49] mt-3 sm:mt-4">

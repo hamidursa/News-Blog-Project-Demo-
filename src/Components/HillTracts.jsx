@@ -62,12 +62,12 @@ const HillTracts = () => {
    return (
       <section className="m-0 sm:mt-6 mb-12 sm:px-0 px-4" id="hillTrack">
          <Container>
-            <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center gap-2">
-               <h2 className="font-rob font-medium text-[20px] sm:text-[24px] text-[#262626]">
+            <div className="flex items-center justify-between mb-6 gap-4">
+            <div className="flex flex-1 items-center gap-2">
+               <h2 className="font-rob font-medium text-[20px] sm:text-[24px] text-[#262626] whitespace-nowrap">
                   Hill Tracts
                </h2>
-               <div className="w-[250px] sm:w-[950px] h-px bg-black"></div>
+               <div className="flex-1 h-px bg-black"></div>
                </div>
 
                <div className="hidden sm:flex items-center gap-1 hover:text-blue-500 transition-all duration-200">

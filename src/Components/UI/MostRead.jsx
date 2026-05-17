@@ -92,14 +92,14 @@ const MostRead = () => {
    const NextArrow = ({ onClick }) => (
       <MdOutlineKeyboardArrowRight
          onClick={onClick}
-         className="absolute -top-5 right-0 transform -translate-y-1/2 z-20 text-[50px] text-textcol bg-transparent rounded-full p-2 cursor-pointer hover:text-hvcol transition-all duration-300"
+         className="absolute -top-5 right-0 transform -translate-y-1/2 z-20 text-[40px] md:text-[50px] text-textcol bg-transparent rounded-full p-2 cursor-pointer hover:text-hvcol transition-all duration-300 hidden md:block"
       />
    );
 
    const PrevArrow = ({ onClick }) => (
       <MdOutlineKeyboardArrowLeft
          onClick={onClick}
-         className="absolute -top-5 right-20 transform -translate-y-1/2 z-20 text-[50px] text-textcol bg-transparent rounded-full p-2 cursor-pointer hover:text-hvcol transition-all duration-300"
+         className="absolute -top-5 right-12 md:right-20 transform -translate-y-1/2 z-20 text-[40px] md:text-[50px] text-textcol bg-transparent rounded-full p-2 cursor-pointer hover:text-hvcol transition-all duration-300 hidden md:block"
       />
    );
 
@@ -109,41 +109,49 @@ const MostRead = () => {
       slidesToShow: 4,
       slidesToScroll: 1,
       speed: 500,
-      // autoplay: true,
-      // autoplaySpeed: 2000,
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
+      responsive: [
+         {
+            breakpoint: 1024,
+            settings: {
+               slidesToShow: 3,
+               slidesToScroll: 1
+            }
+         },
+         {
+            breakpoint: 768,
+            settings: {
+               slidesToShow: 2,
+               slidesToScroll: 1,
+               arrows: false
+            }
+         },
+         {
+            breakpoint: 480,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1,
+               arrows: false
+            }
+         }
+      ]
    };
    return (
-      <section className="mt-6 mx-4 sm:mx-0">
-         <div className="flex items-center gap-2.5 ">
-            <h2 className="font-rob font-medium text-[20px] sm:text-[24px] text-[#262626]">
+      <section className="mt-8 mx-0">
+         <div className="flex items-center gap-2.5 mb-6">
+            <h2 className="font-rob font-medium text-[20px] sm:text-[24px] text-[#262626] whitespace-nowrap">
                Most Read
             </h2>
-            <div className="sm:w-[900px] w-[250px] h-px sm:h-px bg-black"></div>
+            <div className="flex-grow h-px bg-black"></div>
          </div>
 
-         <div className="w-full hidden sm:block">
+         <div className="w-full">
             <Slider {...settings}>
                {mstRead.map((item, index) => (
                   <MostReadDis key={index} news={item} />
                ))}
             </Slider>
-         </div>
-
-         <div>
-            <div className="w-full sm:hidden block">
-               {mstRead2.map((item, i) => (
-                  <MostReadDis
-                     key={i}
-                     news={item}
-                     bBorder={i === mstRead2.length - 1}
-                  />
-               ))}
-            </div>
-            <button className="flex sm:hidden mt-6 mx-auto items-center gap-1 font-rob font-normal text-[14px] text-[#1E222B] p-0 sm:p-3 border border-[#1E222B] rounded-3xl hover:bg-[#1E222B] hover:text-textcol2 transition-all duration-300">
-               Read More <BsArrowUpRight />
-            </button>
          </div>
       </section>
    );
