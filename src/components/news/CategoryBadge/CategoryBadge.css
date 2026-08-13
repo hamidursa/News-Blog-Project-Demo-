@@ -1,0 +1,16 @@
+.category-badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--color-surface);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-sm);
+  transition: opacity var(--transition-fast);
+  text-decoration: none;
+}
+
+.category-badge:hover {
+  opacity: 0.9;
+}

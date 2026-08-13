@@ -1,0 +1,22 @@
+.editor-picks-section {
+  padding: var(--space-2xl) 0;
+  background-color: var(--color-bg);
+}
+
+.editor-picks-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 1024px) {
+  .editor-picks-grid {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+.picks-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}

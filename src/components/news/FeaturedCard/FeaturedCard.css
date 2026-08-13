@@ -1,0 +1,116 @@
+.featured-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  height: 480px;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+}
+
+.featured-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.featured-card:hover .featured-image {
+  transform: scale(1.04);
+}
+
+.featured-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%);
+}
+
+.featured-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--space-2xl);
+  color: var(--color-surface);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.featured-top-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.featured-topic {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.featured-title {
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.featured-title-link {
+  color: var(--color-surface);
+  transition: color var(--transition-fast);
+}
+
+.featured-title-link:hover {
+  color: var(--color-primary-light);
+}
+
+.featured-excerpt {
+  font-size: var(--fs-base);
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 90%;
+  line-height: 1.5;
+}
+
+.featured-bottom-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--fs-xs);
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: var(--space-xs);
+}
+
+.dot-sep {
+  opacity: 0.5;
+}
+
+.read-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .featured-card {
+    height: 380px;
+  }
+  .featured-content {
+    padding: var(--space-lg);
+  }
+  .featured-title {
+    font-size: var(--fs-xl);
+  }
+}

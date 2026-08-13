@@ -1,9 +1,5 @@
-@import "tailwindcss";
-
-@theme{
-  --font-rob:"Roboto", sans-serif;
-  --font-noto:"Noto Serif Bengali", serif;
-  --color-textcol: #171A20;
-  --color-hvcol: #ec8d49;
-  --color-textcol2:#FBFBFB
-}
+@import "./styles/variables.css";
+@import "./styles/reset.css";
+@import "./styles/typography.css";
+@import "./styles/animations.css";
+@import "./styles/utilities.css";

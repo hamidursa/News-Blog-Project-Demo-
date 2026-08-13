@@ -1,0 +1,58 @@
+.static-page {
+  width: 100%;
+}
+
+.static-hero {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, #0a1929 100%);
+  padding: var(--space-3xl) 0 var(--space-2xl);
+  color: var(--color-surface);
+  text-align: center;
+}
+
+.static-hero h1 {
+  font-size: var(--fs-4xl);
+  font-weight: 800;
+  color: var(--color-surface);
+  margin-bottom: var(--space-xs);
+}
+
+.static-hero p {
+  font-size: var(--fs-sm);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.static-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.static-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.static-body section h2 {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 2px solid var(--color-primary-light);
+}
+
+.static-body section p {
+  font-size: var(--fs-base);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-sm);
+}
+
+.static-body a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.static-body a:hover {
+  text-decoration: underline;
+}

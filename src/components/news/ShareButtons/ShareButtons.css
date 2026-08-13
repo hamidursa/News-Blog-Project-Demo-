@@ -1,0 +1,51 @@
+.share-buttons-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  margin: var(--space-lg) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.share-label {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  letter-spacing: 0.05em;
+}
+
+.share-btn-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.share-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-surface);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.share-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.share-btn.fb { background-color: #1877F2; }
+.share-btn.tw { background-color: #1DA1F2; }
+.share-btn.li { background-color: #0A66C2; }
+.share-btn.copy { background-color: var(--color-secondary); }
+
+.copied-toast {
+  font-size: var(--fs-xs);
+  color: var(--color-primary);
+  font-weight: 600;
+  animation: fadeIn 0.2s ease forwards;
+}

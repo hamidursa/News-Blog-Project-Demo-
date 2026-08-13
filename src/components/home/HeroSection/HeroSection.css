@@ -1,0 +1,30 @@
+.hero-section {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-2xl);
+  background-color: var(--color-surface);
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.hero-sidebar-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hero-sidebar-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

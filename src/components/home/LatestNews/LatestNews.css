@@ -1,0 +1,28 @@
+.latest-news-section {
+  padding: var(--space-2xl) 0;
+  background-color: var(--color-bg);
+}
+
+.latest-news-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: flex-start;
+}
+
+@media (min-width: 1024px) {
+  .latest-news-container {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .latest-news-sidebar {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-lg));
+  }
+}
+
+.latest-news-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
