@@ -1,115 +1,122 @@
-# 📰 Third Angle - Premium Responsive News Blog Application
+# 📰 Third Angle — Premium News Portal & Editorial Blog
 
-[![React](https://img.shields.io/badge/React-19.0.0-blue?logo=react&logoColor=white)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-7.2.4-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.1.17-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-
-**Third Angle** is a premium, state-of-the-art dual-language (English & Bengali) news portal and blogging web application built with **React 19**, **Vite**, and **Tailwind CSS v4**. The application features rich visual aesthetics, interactive micro-animations, touch-enabled carousels, and fluid layout responsiveness optimized for all viewport sizes from small mobile screens (320px) up to ultra-wide desktop monitors.
+> **Third Angle (তৃতীয় কোণ)** is a high-performance, responsive, dual-language (English & Bengali) digital news portal and editorial blog. Built with **React 19**, **React Router DOM**, **Vanilla CSS (Design Tokens)**, and **JavaScript (ES6+)**, it delivers a clean, modern, and readable news experience inspired by leading editorial outlets like *BBC*, *Bloomberg*, *CNN*, and *TechCrunch*.
 
 ---
 
-## 🌟 Key Features
+## ✨ Features & Highlights
 
-* **🌐 Dual-Language Sections (Bilingual)**: Integrates dedicated English and Bengali sections (বাংলা, সর্বাধিক পঠিত) with appropriate localized styling and typography.
-* **📱 100% Fluid Responsiveness**: Tested and optimized for flawless viewing across all mobile, tablet, and desktop breakpoints with zero horizontal scrollbars or cutoffs.
-* **⚡ Sticky Header with Dropdown & Search Overlay**: Solid backdrop (`bg-[#F2F2F2]`) sticky navigation with relative-positioned desktop "More" dropdowns and a smooth transition-based search toggle.
-* **🍔 Sliding Mobile Navigation Drawer**: Sleek slide-in categories navigation panel triggered via hamburger menu, using a highly reliable positional transition and absolute z-indexing.
-* **🎠 Touch-Enabled Carousels**: Beautiful, responsive, swipe-capable news carousels powered by `React-Slick` (`slidesToShow: 1` on mobile, `2` on small tablets, `3` on tablets, and `4` on desktop) with automatic control hiding on touchscreens.
-* **🎨 Premium Aesthetic Cards**: Clean, uniform news list rows and grid columns utilizing CSS Line-Clamping (`line-clamp-2` / `line-clamp-3`) and fluid images with `object-cover` and `shrink-0` definitions to guarantee consistent block layouts.
-* **✨ Dynamic Separation Lines**: Dynamically scaling horizontal separators built with CSS Flexbox (`flex-1 h-px bg-black`) replacing fragile hardcoded pixel dividers.
+- **🎨 Modern Editorial Design System**: Pure Vanilla CSS implementation using CSS Custom Properties (`:root`), modular stylesheets, crisp typography scale (*Inter*, *Poppins*, *Roboto*, *Noto Serif Bengali*), and curated color system.
+- **⚡ Zero UI Library Overhead**: Built completely without Tailwind CSS, Bootstrap, Material UI, Redux, or third-party UI component libraries for optimal bundle size and full stylistic control.
+- **🌐 Dual-Language Support**: Dedicated sections and components tailored for bilingual English and Bengali (বাংলা) editorial content.
+- **📱 100% Fluid Responsiveness**: Optimized across all viewports (from 320px mobile devices up to 4K desktop screens) with flexible CSS Grid, Flexbox layouts, and slide-in drawer mobile menu.
+- **🚀 React Router DOM Routing & Lazy Loading**: Page routing with code-splitting (`React.lazy` & `Suspense`) across 9 page views:
+  - **Home**: Hero banner, breaking news bar, trending articles grid, category highlights, editor's picks, and newsletter widget.
+  - **News Details**: Full article layout, author card, reading time, view count, social share buttons, tag lists, prev/next navigation, and related stories.
+  - **Category Page**: Filterable category listing with pagination.
+  - **Search Page & Overlay**: Live search modal overlay and full search results view with query suggestions.
+  - **About Page**: Company story, mission & vision, interactive stats, editorial team showcase, and company timeline.
+  - **Contact Page**: Interactive contact form, newsroom office cards, and map indicator.
+  - **Privacy & Terms**: Comprehensive static legal pages.
+  - **404 Page**: Custom animated empty state page.
+- **🔍 Advanced SEO & Open Graph**: Full Meta tag optimization, Open Graph (`og:*`), Twitter Cards, canonical URL tags, and Schema.org `NewsMediaOrganization` JSON-LD structured data.
+- **🔌 Future-Ready Architecture**: Centralized data services (`articleService.js`, `categoryService.js`) abstracting data fetching logic to allow seamless backend / Admin Panel integration without UI code refactoring.
 
 ---
 
 ## 🛠️ Technology Stack
 
-| Technology / Library | Description |
+| Technology | Purpose |
 | :--- | :--- |
-| **React 19** | Core frontend component library |
-| **Vite** | Blazing fast next-generation build tool & bundler |
-| **Tailwind CSS v4** | Modern utility-first CSS framework with native `@tailwindcss/vite` integration |
-| **React Icons** | Premium vector icon packs (Ti, Io, Md, Bs) |
-| **React-Slick & Slick-Carousel** | Smooth, high-performance carousel components with full breakpoint customizability |
+| **React 19** | Modern UI component library with Hooks and Context |
+| **Vite 7** | Next-generation frontend build tool and dev server |
+| **React Router DOM v7** | Single Page Application (SPA) client-side routing |
+| **Vanilla CSS3** | Custom design tokens, CSS variables, keyframe animations, and flex/grid layouts |
+| **JavaScript (ES6+)** | Pure functional logic and state management |
+| **HTML5 & SVG** | Semantic structure, accessibility markup, and custom inline vector icons |
 
 ---
 
-## 📁 Codebase Directory Structure
+## 📁 Project Directory Structure
 
 ```text
-├── dist/                     # Compiled production-ready web assets
-├── public/                   # Static browser assets (Favicons, web manifests)
-└── src/
-    ├── assets/               # Local media assets (logos, banner pictures, etc.)
-    │   └── Image/            # Grid, category and slider images
-    ├── Components/           # React Components
-    │   ├── Layouts/          # Structural & modular layout modules
-    │   │   ├── Container.jsx # Responsive max-width viewport boundary wrapper
-    │   │   ├── NewsHead.jsx  # Individual news listing rows
-    │   │   ├── TopNews.jsx   # Hero news display card (English)
-    │   │   ├── TopNewsBn.jsx # Hero news display card (Bengali)
-    │   │   ├── TopHead.jsx   # Block headers & description templates
-    │   │   └── ...
-    │   ├── UI/               # Reusable visual interfaces
-    │   │   ├── Category.jsx  # Mobile drawer and navigation categories
-    │   │   ├── MostRead.jsx  # Responsive English touchscreen slider
-    │   │   ├── MostReadBn.jsx# Responsive Bengali touchscreen slider
-    │   │   └── ...
-    │   ├── Header.jsx        # Sticky navigation header
-    │   ├── Footer.jsx        # Grid-based clean structured footer
-    │   └── Natinal_Addm.jsx  # Grid-based double-column section
-    ├── App.jsx               # Entry-level React root orchestrator
-    ├── index.css             # Tailwind imports & baseline design tokens
-    └── main.jsx              # Main virtual DOM mounting node
+src/
+├── assets/                  # Local WebP images and branding media
+├── components/
+│   ├── advertisement/       # AdBanner.jsx + AdBanner.css (Ad placeholders)
+│   ├── common/              # Badge, Breadcrumb, Button, EmptyState, Icon, Input,
+│   │                        # Loader, Pagination, ScrollToTop, SectionTitle, Skeleton
+│   ├── home/                # CategorySection, EditorPicks, HeroSection, LatestNews, MostRead
+│   ├── layout/              # Footer, Header, Layout, MobileMenu, Navbar, Sidebar
+│   ├── news/                # ArticleNavigation, AuthorCard, BreakingNews, CategoryBadge,
+│   │                        # FeaturedCard, NewsCard, RelatedNews, ShareButtons, SmallCard, TagList
+│   ├── newsletter/          # Newsletter.jsx + Newsletter.css
+│   └── search/              # SearchOverlay.jsx + SearchOverlay.css
+├── constants/               # Route path definitions & breakpoint constants
+├── context/                 # SearchContext.jsx (Global search state)
+├── data/                    # Articles, categories, authors, navigation, and site config JSON/JS
+├── hooks/                   # Custom hooks (useDebounce, useMediaQuery, useScrollPosition)
+├── pages/                   # Home, NewsDetails, Category, Search, About, Contact, Privacy, Terms, NotFound
+├── services/                # Data access layers (articleService, categoryService)
+├── styles/                  # Design tokens (variables, reset, typography, animations, utilities)
+├── utils/                   # Formatting helpers (formatDate, slugify)
+├── App.jsx                  # Main React Router setup with lazy loading
+├── index.css                # Style entry point
+└── main.jsx                 # Application entry point
 ```
 
 ---
 
-## ⚙️ Installation & Development Guide
+## ⚙️ Installation & Local Setup Guide
 
 ### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed (v18+ recommended) along with `npm`.
+- Node.js (v18.0.0 or higher recommended)
+- npm (v9.0.0 or higher)
 
-### 1. Clone the Repository
+### 1. Clone Repository
 ```bash
 git clone https://github.com/hamidursa/News-Blog-Project-Demo-.git
 cd News-Blog-Project-Demo-
 ```
 
 ### 2. Install Dependencies
-Install the required packages, including development packages and layout UI libraries:
 ```bash
 npm install
 ```
 
 ### 3. Run Development Server
-Spin up the local development hot-reloading server:
 ```bash
 npm run dev
 ```
-Open your browser and navigate to `http://localhost:5173/` to interact with the application.
+Open `http://localhost:5173` in your web browser.
 
-### 4. Build for Production
-To bundle and optimize the project for production deployment:
+### 4. Production Build & Preview
 ```bash
+# Generate optimized production build
 npm run build
+
+# Preview production build locally
+npm run preview
 ```
-This generates a highly optimized static build folder under `/dist/`.
 
 ---
 
-## 🖥️ Responsive Optimization & UI Audit Details
+## 🎯 SEO & Site Optimization Details
 
-A meticulous visual audit was performed across desktop, tablet, and narrow-mobile (such as 320px up to 501px viewports) viewports. The following major layout bugs were resolved:
+1. **Title & Meta Tag Structure**: Title tags are formatted cleanly as `Title | Category` without double-hyphen (`--`) breaks.
+2. **Open Graph & Twitter Cards**: Native social preview image support for shared news URLs.
+3. **Structured Data**: Embedded Schema.org JSON-LD script for rich snippets on Google Search.
+4. **Performance Optimization**: Code-splitting via `React.lazy` ensures fast initial page loads (bundle initial JS gzip size < 90kB).
 
-* **Fixed-Pixel Constraints Eliminated**: Hardcoded layout blocks (like `w-[580px]` and `w-[380px]`) were replaced with fluid flexbox percentages (`w-full`, `flex-1`) to enable modular resizing.
-* **Headline Truncation Overhauled**: Replaced raw character cutting with dynamic line-clamping CSS styling so that the headlines wrap naturally without breaking, clipping, or text overlapping.
-* **Component-Level Overflow Resolved**: Optimized image wrappers with `shrink-0` and `object-cover` so that sidebar and news lists never experience image scaling deformation.
-* **Clean Transition Drawer**: Converted category popups to slide out with a beautiful and robust CSS transition on the `left` property.
+---
+
+## 🔒 Future Phase: Admin Panel Roadmap
+
+The application architecture is structured to prepare for a headless backend integration (Node.js/Express, Supabase, Firebase, or REST API):
+- **API Layer Isolation**: `src/services/articleService.js` contains methods like `getAll()`, `getBySlug()`, `search()`. In Phase 2, replacing static data returns with `fetch()` calls requires zero refactoring on UI components.
+- **Role Scoping**: Public website operates independently of user authentication. The upcoming Admin Panel will reside under secure authentication guards.
 
 ---
 
 ## 📄 License
-This project is licensed under the MIT License. Feel free to use and distribute it!
-
----
-*Developed with 💖 to provide a premium reading experience.*
+This project is licensed under the **MIT License**.

@@ -18,7 +18,7 @@ const stats = [
 
 const timeline = [
   { year: '2014', event: 'Third Angle founded as a digital-first news outlet covering hill district affairs.' },
-  { year: '2016', event: 'Launched bilingual (English + Bengali) editorial desk.' },
+  { year: '2016', event: 'Launched bilingual (English & Bengali) editorial desk.' },
   { year: '2019', event: 'Expanded to national coverage. Monthly readership crossed 500K.' },
   { year: '2022', event: 'Launched investigative reporting unit and multimedia journalism team.' },
   { year: '2026', event: 'Complete platform redesign with modern editorial UI and mobile-first experience.' }
@@ -32,7 +32,7 @@ const About = () => {
         <div className="container">
           <h1 className="about-hero-title">Who We Are</h1>
           <p className="about-hero-sub">
-            Third Angle — delivering the unheard perspective for over a decade.
+            Third Angle: Delivering unbiased perspectives and independent journalism for over a decade.
           </p>
         </div>
       </section>
@@ -43,7 +43,7 @@ const About = () => {
           <div>
             <h2 className="about-section-heading">Our Story</h2>
             <p>
-              Third Angle was born from a simple belief — that journalism should give voice to those often overlooked by mainstream media. We began in 2014 focusing on the Chittagong Hill Tracts, and today we cover the full spectrum of national and international news with the same independent spirit.
+              Third Angle was born from a simple belief: that journalism should give voice to those often overlooked by mainstream media. We began in 2014 focusing on the Chittagong Hill Tracts, and today we cover the full spectrum of national and international news with the same independent spirit.
             </p>
             <p>
               We are a bilingual editorial platform committed to fair, fact-based reporting. Every story we publish reflects our commitment to truth, accuracy, and community-first journalism.
@@ -52,7 +52,7 @@ const About = () => {
           <div className="about-mission-vision">
             <div className="mission-box">
               <h3>Our Mission</h3>
-              <p>To empower citizens with credible, independent, and timely news that serves the public interest — free from political bias.</p>
+              <p>To empower citizens with credible, independent, and timely news that serves the public interest without political bias.</p>
             </div>
             <div className="vision-box">
               <h3>Our Vision</h3>
