@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { categoryService } from '../../services/categoryService';
 import { articleService } from '../../services/articleService';
@@ -16,19 +16,41 @@ const ARTICLES_PER_PAGE = 6;
 const Category = () => {
   const { slug } = useParams();
   const [currentPage, setCurrentPage] = useState(1);
+  const [activeFilter, setActiveFilter] = useState('latest'); // 'latest', 'most-read', 'trending'
 
   const category = categoryService.getBySlug(slug);
-  const allArticles = articleService.getByCategory(slug);
+  const rawArticles = articleService.getByCategory(slug);
+
+  // Dynamic filter & sort logic
+  const filteredArticles = useMemo(() => {
+    let list = [...rawArticles];
+    if (activeFilter === 'most-read') {
+      return list.sort((a, b) => {
+        const viewsA = parseFloat(a.viewCount) || 0;
+        const viewsB = parseFloat(b.viewCount) || 0;
+        return viewsB - viewsA;
+      });
+    } else if (activeFilter === 'trending') {
+      const trending = list.filter(a => a.isTrending);
+      return trending.length > 0 ? trending : list;
+    }
+    return list;
+  }, [rawArticles, activeFilter]);
 
   if (!category) {
     return <Navigate to="/404" replace />;
   }
 
-  const totalPages = Math.ceil(allArticles.length / ARTICLES_PER_PAGE);
-  const paginatedArticles = allArticles.slice(
+  const totalPages = Math.ceil(filteredArticles.length / ARTICLES_PER_PAGE);
+  const paginatedArticles = filteredArticles.slice(
     (currentPage - 1) * ARTICLES_PER_PAGE,
     currentPage * ARTICLES_PER_PAGE
   );
+
+  const handleFilterChange = (filterName) => {
+    setActiveFilter(filterName);
+    setCurrentPage(1);
+  };
 
   return (
     <div className="category-page">
@@ -45,13 +67,30 @@ const Category = () => {
 
       <div className="container category-layout">
         <div className="category-main">
-          {/* Filter Bar (UI only) */}
+          {/* Functional Filter Bar */}
           <div className="filter-bar">
-            <span className="filter-label">{allArticles.length} articles found</span>
+            <span className="filter-label">
+              Showing {filteredArticles.length} article{filteredArticles.length !== 1 ? 's' : ''}
+            </span>
             <div className="filter-controls">
-              <button className="filter-btn active">Latest</button>
-              <button className="filter-btn">Most Read</button>
-              <button className="filter-btn">Trending</button>
+              <button
+                className={`filter-btn ${activeFilter === 'latest' ? 'active' : ''}`}
+                onClick={() => handleFilterChange('latest')}
+              >
+                Latest
+              </button>
+              <button
+                className={`filter-btn ${activeFilter === 'most-read' ? 'active' : ''}`}
+                onClick={() => handleFilterChange('most-read')}
+              >
+                Most Read
+              </button>
+              <button
+                className={`filter-btn ${activeFilter === 'trending' ? 'active' : ''}`}
+                onClick={() => handleFilterChange('trending')}
+              >
+                Trending
+              </button>
             </div>
           </div>
 
@@ -65,13 +104,16 @@ const Category = () => {
               <Pagination
                 currentPage={currentPage}
                 totalPages={totalPages}
-                onPageChange={setCurrentPage}
+                onPageChange={(page) => {
+                  setCurrentPage(page);
+                  window.scrollTo({ top: 300, behavior: 'smooth' });
+                }}
               />
             </>
           ) : (
             <EmptyState
-              title="No Articles Yet"
-              message={`We haven't published any articles in the ${category.name} category yet.`}
+              title="No Articles Found"
+              message={`No articles currently match the "${activeFilter}" filter in ${category.name}.`}
             />
           )}
         </div>

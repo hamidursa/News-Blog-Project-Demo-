@@ -1,122 +1,158 @@
-# 📰 Third Angle — Premium News Portal & Editorial Blog
+# Third Angle News Portal
 
-> **Third Angle (তৃতীয় কোণ)** is a high-performance, responsive, dual-language (English & Bengali) digital news portal and editorial blog. Built with **React 19**, **React Router DOM**, **Vanilla CSS (Design Tokens)**, and **JavaScript (ES6+)**, it delivers a clean, modern, and readable news experience inspired by leading editorial outlets like *BBC*, *Bloomberg*, *CNN*, and *TechCrunch*.
-
----
-
-## ✨ Features & Highlights
-
-- **🎨 Modern Editorial Design System**: Pure Vanilla CSS implementation using CSS Custom Properties (`:root`), modular stylesheets, crisp typography scale (*Inter*, *Poppins*, *Roboto*, *Noto Serif Bengali*), and curated color system.
-- **⚡ Zero UI Library Overhead**: Built completely without Tailwind CSS, Bootstrap, Material UI, Redux, or third-party UI component libraries for optimal bundle size and full stylistic control.
-- **🌐 Dual-Language Support**: Dedicated sections and components tailored for bilingual English and Bengali (বাংলা) editorial content.
-- **📱 100% Fluid Responsiveness**: Optimized across all viewports (from 320px mobile devices up to 4K desktop screens) with flexible CSS Grid, Flexbox layouts, and slide-in drawer mobile menu.
-- **🚀 React Router DOM Routing & Lazy Loading**: Page routing with code-splitting (`React.lazy` & `Suspense`) across 9 page views:
-  - **Home**: Hero banner, breaking news bar, trending articles grid, category highlights, editor's picks, and newsletter widget.
-  - **News Details**: Full article layout, author card, reading time, view count, social share buttons, tag lists, prev/next navigation, and related stories.
-  - **Category Page**: Filterable category listing with pagination.
-  - **Search Page & Overlay**: Live search modal overlay and full search results view with query suggestions.
-  - **About Page**: Company story, mission & vision, interactive stats, editorial team showcase, and company timeline.
-  - **Contact Page**: Interactive contact form, newsroom office cards, and map indicator.
-  - **Privacy & Terms**: Comprehensive static legal pages.
-  - **404 Page**: Custom animated empty state page.
-- **🔍 Advanced SEO & Open Graph**: Full Meta tag optimization, Open Graph (`og:*`), Twitter Cards, canonical URL tags, and Schema.org `NewsMediaOrganization` JSON-LD structured data.
-- **🔌 Future-Ready Architecture**: Centralized data services (`articleService.js`, `categoryService.js`) abstracting data fetching logic to allow seamless backend / Admin Panel integration without UI code refactoring.
+A premium, modern, production-ready news blog built with **React**, **React Router DOM**, and **vanilla CSS**. Third Angle is a bilingual (English & Bengali) editorial platform delivering independent journalism.
 
 ---
 
-## 🛠️ Technology Stack
+## Live Features
+
+- **Breaking News Ticker** — Smooth continuous right-to-left marquee with pause-on-hover
+- **Multi-page SPA Routing** — Home, Article Detail, Category, Search, About, Contact, Privacy, Terms, 404
+- **Working Search** — Full-text search overlay and dedicated search results page
+- **Category Filters** — Latest / Most Read / Trending filters on every category page
+- **Newsletter Subscription** — Email validation with delivery to `hamidur.dev@gmail.com`
+- **Working Navigation** — Mobile drawer, dropdown menus, active states, scroll-to-top
+- **Code-split Lazy Loading** — Each page loads independently for fast initial render
+
+---
+
+## Tech Stack
 
 | Technology | Purpose |
-| :--- | :--- |
-| **React 19** | Modern UI component library with Hooks and Context |
-| **Vite 7** | Next-generation frontend build tool and dev server |
-| **React Router DOM v7** | Single Page Application (SPA) client-side routing |
-| **Vanilla CSS3** | Custom design tokens, CSS variables, keyframe animations, and flex/grid layouts |
-| **JavaScript (ES6+)** | Pure functional logic and state management |
-| **HTML5 & SVG** | Semantic structure, accessibility markup, and custom inline vector icons |
+|---|---|
+| React 19 | UI component library |
+| Vite 7 | Build tool and dev server |
+| React Router DOM v7 | Client-side routing |
+| Vanilla CSS3 | Custom design tokens, grid, animations |
+| JavaScript ES6+ | Business logic and state |
+| Formspree | Newsletter form delivery |
 
 ---
 
-## 📁 Project Directory Structure
+## Project Structure
 
-```text
+```
 src/
-├── assets/                  # Local WebP images and branding media
+├── assets/Image/           # Local news images (WebP/PNG)
 ├── components/
-│   ├── advertisement/       # AdBanner.jsx + AdBanner.css (Ad placeholders)
-│   ├── common/              # Badge, Breadcrumb, Button, EmptyState, Icon, Input,
-│   │                        # Loader, Pagination, ScrollToTop, SectionTitle, Skeleton
-│   ├── home/                # CategorySection, EditorPicks, HeroSection, LatestNews, MostRead
-│   ├── layout/              # Footer, Header, Layout, MobileMenu, Navbar, Sidebar
-│   ├── news/                # ArticleNavigation, AuthorCard, BreakingNews, CategoryBadge,
-│   │                        # FeaturedCard, NewsCard, RelatedNews, ShareButtons, SmallCard, TagList
-│   ├── newsletter/          # Newsletter.jsx + Newsletter.css
-│   └── search/              # SearchOverlay.jsx + SearchOverlay.css
-├── constants/               # Route path definitions & breakpoint constants
-├── context/                 # SearchContext.jsx (Global search state)
-├── data/                    # Articles, categories, authors, navigation, and site config JSON/JS
-├── hooks/                   # Custom hooks (useDebounce, useMediaQuery, useScrollPosition)
-├── pages/                   # Home, NewsDetails, Category, Search, About, Contact, Privacy, Terms, NotFound
-├── services/                # Data access layers (articleService, categoryService)
-├── styles/                  # Design tokens (variables, reset, typography, animations, utilities)
-├── utils/                   # Formatting helpers (formatDate, slugify)
-├── App.jsx                  # Main React Router setup with lazy loading
-├── index.css                # Style entry point
-└── main.jsx                 # Application entry point
+│   ├── advertisement/      # Ad banner placeholder
+│   ├── common/             # Badge, Breadcrumb, Button, EmptyState, Icon,
+│   │                       # Input, Loader, Pagination, ScrollToTop,
+│   │                       # SectionTitle, Skeleton
+│   ├── home/               # CategorySection, EditorPicks, HeroSection,
+│   │                       # LatestNews, MostRead, TrendingSection
+│   ├── layout/             # Footer, Layout, MobileMenu, Navbar, Sidebar
+│   ├── news/               # ArticleNavigation, AuthorCard, BreakingNews,
+│   │                       # CategoryBadge, FeaturedCard, NewsCard,
+│   │                       # RelatedNews, ShareButtons, SmallCard, TagList
+│   ├── newsletter/         # Newsletter form component
+│   └── search/             # SearchOverlay component
+├── constants/              # Route paths, breakpoints
+├── context/                # SearchContext (global search state)
+├── data/                   # articles.js, categories.js, authors.js,
+│                           # navigation.js, siteConfig.js
+├── hooks/                  # useDebounce, useMediaQuery, useScrollPosition
+├── pages/                  # Home, NewsDetails, Category, Search,
+│                           # About, Contact, Privacy, Terms, NotFound
+├── services/               # articleService.js, categoryService.js
+├── styles/                 # variables.css, reset.css, typography.css,
+│                           # animations.css, utilities.css
+├── utils/                  # formatDate.js, slugify.js
+├── App.jsx                 # Router with lazy loading
+├── index.css               # Global CSS entry point
+└── main.jsx                # Application mount point
 ```
 
 ---
 
-## ⚙️ Installation & Local Setup Guide
+## Installation
 
 ### Prerequisites
-- Node.js (v18.0.0 or higher recommended)
-- npm (v9.0.0 or higher)
+- **Node.js** v18 or higher
+- **npm** v9 or higher
 
-### 1. Clone Repository
+### Setup
+
 ```bash
+# 1. Clone the repository
 git clone https://github.com/hamidursa/News-Blog-Project-Demo-.git
 cd News-Blog-Project-Demo-
-```
 
-### 2. Install Dependencies
-```bash
+# 2. Install dependencies
 npm install
-```
 
-### 3. Run Development Server
-```bash
+# 3. Run development server
 npm run dev
-```
-Open `http://localhost:5173` in your web browser.
+# Open http://localhost:5173
 
-### 4. Production Build & Preview
-```bash
-# Generate optimized production build
+# 4. Build for production
 npm run build
 
-# Preview production build locally
+# 5. Preview production build locally
 npm run preview
 ```
 
 ---
 
-## 🎯 SEO & Site Optimization Details
+## Newsletter Configuration
 
-1. **Title & Meta Tag Structure**: Title tags are formatted cleanly as `Title | Category` without double-hyphen (`--`) breaks.
-2. **Open Graph & Twitter Cards**: Native social preview image support for shared news URLs.
-3. **Structured Data**: Embedded Schema.org JSON-LD script for rich snippets on Google Search.
-4. **Performance Optimization**: Code-splitting via `React.lazy` ensures fast initial page loads (bundle initial JS gzip size < 90kB).
+The newsletter form submits to a **Formspree** endpoint. To configure delivery to your own email:
+
+1. Create a free account at [formspree.io](https://formspree.io)
+2. Create a new form and get your form ID (e.g., `xvgopqbw`)
+3. Update the fetch URL in [`Newsletter.jsx`](src/components/newsletter/Newsletter.jsx):
+
+```js
+const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', { ... });
+```
+
+Currently configured to deliver to: `hamidur.dev@gmail.com`
 
 ---
 
-## 🔒 Future Phase: Admin Panel Roadmap
+## Pages and Routes
 
-The application architecture is structured to prepare for a headless backend integration (Node.js/Express, Supabase, Firebase, or REST API):
-- **API Layer Isolation**: `src/services/articleService.js` contains methods like `getAll()`, `getBySlug()`, `search()`. In Phase 2, replacing static data returns with `fetch()` calls requires zero refactoring on UI components.
-- **Role Scoping**: Public website operates independently of user authentication. The upcoming Admin Panel will reside under secure authentication guards.
+| Route | Page | Description |
+|---|---|---|
+| `/` | Home | Hero section, breaking news ticker, trending, latest, category sections |
+| `/news/:slug` | Article | Full article with author, tags, share, related articles |
+| `/category/:slug` | Category | Filterable article listing with pagination |
+| `/search` | Search | Full-text search with live suggestions |
+| `/about` | About | Company story, team, stats, timeline |
+| `/contact` | Contact | Contact form + office information |
+| `/privacy` | Privacy Policy | Legal text |
+| `/terms` | Terms of Service | Legal text |
+| `*` | 404 | Custom not-found page |
 
 ---
 
-## 📄 License
-This project is licensed under the **MIT License**.
+## Design System
+
+Defined in [`src/styles/variables.css`](src/styles/variables.css):
+
+| Token | Value |
+|---|---|
+| `--color-primary` | `#E63946` (Red) |
+| `--color-secondary` | `#1D3557` (Navy) |
+| `--color-bg` | `#F8F9FA` |
+| `--color-surface` | `#FFFFFF` |
+| `--container-width` | `1380px` |
+| `--font-primary` | Inter |
+| `--font-heading` | Poppins |
+| `--font-bengali` | Noto Serif Bengali |
+
+---
+
+## Future Development (Admin Panel Roadmap)
+
+All data is abstracted through service files:
+- [`articleService.js`](src/services/articleService.js) — `getAll()`, `getBySlug()`, `search()`, `getByCategory()`
+- [`categoryService.js`](src/services/categoryService.js) — Category lookup and metadata
+
+Replacing static JSON with a REST API or Firebase backend requires only updating these service methods — no UI component changes needed.
+
+---
+
+## License
+
+MIT License — free to use, modify, and distribute.

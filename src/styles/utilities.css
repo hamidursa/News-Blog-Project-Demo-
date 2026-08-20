@@ -3,14 +3,14 @@
   max-width: var(--container-width);
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--space-md);
-  padding-right: var(--space-md);
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .container {
-    padding-left: var(--space-lg);
-    padding-right: var(--space-lg);
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
   }
 }
 
@@ -59,13 +59,14 @@
   justify-content: space-between;
 }
 
+/* ---- Grid Utilities ---- */
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-lg);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .grid-2 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -75,6 +76,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-lg);
+  align-items: stretch;
 }
 
 @media (min-width: 640px) {
@@ -107,7 +109,7 @@
   }
 }
 
-/* Page section spacing */
+/* ---- Section Spacing ---- */
 .section-padding {
   padding-top: var(--space-xl);
   padding-bottom: var(--space-xl);

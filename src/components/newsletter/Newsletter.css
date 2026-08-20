@@ -48,9 +48,9 @@
 
 .newsletter-form {
   display: flex;
-  flex-direction: flex;
+  align-items: flex-start;
   gap: var(--space-xs);
-  max-width: 480px;
+  max-width: 520px;
   margin: 0 auto;
 }
 
@@ -59,8 +59,16 @@
   max-width: 100%;
 }
 
-.newsletter-input {
+.newsletter-input-group {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+
+.newsletter-input {
+  width: 100%;
   padding: 0.75rem 1rem;
   font-size: var(--fs-sm);
   border-radius: var(--radius-md);
@@ -68,6 +76,7 @@
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--color-surface);
   outline: none;
+  transition: all var(--transition-fast);
 }
 
 .newsletter-input::placeholder {
@@ -76,15 +85,64 @@
 
 .newsletter-input:focus {
   border-color: var(--color-primary);
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.newsletter-input.input-invalid {
+  border-color: #FF6B6B;
+  background-color: rgba(255, 107, 107, 0.15);
+}
+
+.newsletter-error-msg {
+  font-size: var(--fs-xs);
+  color: #FF6B6B;
+  margin-top: 0.25rem;
+  font-weight: 500;
 }
 
 .newsletter-success {
-  background-color: rgba(42, 157, 143, 0.2);
+  background-color: rgba(42, 157, 143, 0.18);
   border: 1px solid #2A9D8F;
-  color: #52B788;
-  padding: var(--space-md);
-  border-radius: var(--radius-md);
+  color: var(--color-surface);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
   font-size: var(--fs-sm);
-  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.success-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #2A9D8F;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.newsletter-success code {
+  color: var(--color-accent);
+  background: rgba(0,0,0,0.3);
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-sm);
+}
+
+.subscribe-another-btn {
+  margin-top: var(--space-sm);
+  font-size: var(--fs-xs);
+  color: rgba(255,255,255,0.7);
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.subscribe-another-btn:hover {
+  color: var(--color-surface);
 }

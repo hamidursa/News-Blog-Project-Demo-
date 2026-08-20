@@ -28,8 +28,15 @@ export const NewsCard = ({
   return (
     <article className={`news-card card-${variant} ${className}`}>
       <div className="card-image-wrapper">
-        <Link to={`/news/${slug}`} className="image-link">
-          <img src={image} alt={title} className="card-image" loading="lazy" />
+        <Link to={`/news/${slug}`} className="image-link" aria-label={`Read: ${title}`}>
+          <img
+            src={image}
+            alt={title}
+            className="card-image"
+            loading="lazy"
+            width="400"
+            height="225"
+          />
         </Link>
         {category && variant !== 'compact' && (
           <div className="card-badge-pos">
@@ -41,13 +48,13 @@ export const NewsCard = ({
       <div className="card-content">
         {topic && <span className="card-topic">{topic}</span>}
         <h3 className="card-title">
-          <Link to={`/news/${slug}`} className="card-title-link">
+          <Link to={`/news/${slug}`} className="card-title-link" title={title}>
             {title}
           </Link>
         </h3>
 
-        {excerpt && variant === 'vertical' && (
-          <p className="card-excerpt line-clamp-2">{excerpt}</p>
+        {excerpt && variant !== 'compact' && (
+          <p className="card-excerpt">{excerpt}</p>
         )}
 
         <div className="card-meta">
@@ -61,13 +68,12 @@ export const NewsCard = ({
                 <Icon name="clock" /> {readingTime}
               </span>
             )}
-            {viewCount && (
-              <span className="meta-item">
-                <Icon name="eye" /> {viewCount}
-              </span>
-            )}
           </div>
         </div>
+
+        <Link to={`/news/${slug}`} className="card-read-more" aria-label={`Read full article: ${title}`}>
+          Read More <Icon name="arrowRight" />
+        </Link>
       </div>
     </article>
   );
