@@ -1,643 +1,1326 @@
-import bannerImg from '../assets/Image/Banner_img/banner_img.png';
-import hImg1 from '../assets/Image/Banner_img/h_img1.png';
-import hImg2 from '../assets/Image/Banner_img/h_img2.png';
-import hImg3 from '../assets/Image/Banner_img/h_img3.png';
-import hImg4 from '../assets/Image/Banner_img/h_img4.png';
-
-import hillTopImg from '../assets/Image/HillTracts/top_img.png';
-import hillImg1 from '../assets/Image/HillTracts/img1.png';
-import hillImg2 from '../assets/Image/HillTracts/img2.png';
-import hillImg3 from '../assets/Image/HillTracts/img3.png';
-import hillImg4 from '../assets/Image/HillTracts/img4.png';
-
-import banglaTopImg from '../assets/Image/Bangla/top.png';
-import bnImg1 from '../assets/Image/Bangla/img1.png';
-import bnImg2 from '../assets/Image/Bangla/img2.png';
-import bnImg3 from '../assets/Image/Bangla/img3.png';
-import bnImg4 from '../assets/Image/Bangla/img4.png';
-
-import nTopImg from '../assets/Image/National/top.png';
-import nbImg1 from '../assets/Image/National/img1.png';
-import nbImg2 from '../assets/Image/National/img2.png';
-import nbImg3 from '../assets/Image/National/img3.png';
-import nbImg4 from '../assets/Image/National/img4.png';
-
-import aTopImg from '../assets/Image/Administration/top.png';
-import abImg1 from '../assets/Image/Administration/img1.png';
-import abImg2 from '../assets/Image/Administration/img2.png';
-import abImg3 from '../assets/Image/Administration/img3.png';
-import abImg4 from '../assets/Image/Administration/img4.png';
-
-import readImg1 from '../assets/Image/ReadMoreCard/img1.png';
-import readImg2 from '../assets/Image/ReadMoreCard/img2.png';
-import readImg3 from '../assets/Image/ReadMoreCard/img3.png';
-import readImg4 from '../assets/Image/ReadMoreCard/img4.png';
-
 export const articles = [
+  // =========================================================================
+  // 1. NATIONAL (6 Articles) - Researched Live News August 20, 2026
+  // =========================================================================
   {
-    id: "art-1",
-    slug: "ban-on-entry-of-houseboats-in-tanguar-haor-watchtower-area",
-    title: "Ban on entry of houseboats in Tanguar Haor's watchtower area to protect wildlife",
-    topic: "Ecotourism Regulations",
-    excerpt: "The local administration has imposed a ban on the entry of houseboats into the Tanguar Haor watchtower area following rising environmental concerns. Twelve mandatory guidelines have been issued for tourists visiting the Sunamganj wetland.",
+    id: "art-nat-1",
+    slug: "bangladesh-holds-23rd-presidential-election-parliament",
+    title: "Bangladesh holds 23rd presidential election in parliament amid historic democratic transition",
+    topic: "Head of State Transition",
+    excerpt: "Parliamentary voting is underway at Jatiya Sangsad to elect the 23rd President of Bangladesh, with candidate Mirza Fakhrul facing opposition nominee Col Oli Ahmed.",
     content: `
-      The local administration of Sunamganj has placed strict restrictions prohibiting houseboats from anchoring or moving within the fragile ecological perimeter of the Tanguar Haor watchtower zone.
+      Members of Bangladesh's National Parliament are casting ballots today, August 20, 2026, to elect the country's 23rd President in a landmark constitutional proceeding.
 
-      Environmentalists and regional tourism officers welcomed the measure, noting that unrestrained motorized houseboat operation had caused rising noise pollution, waste dumping, and threats to native migratory bird habitats.
+      The election follows the constitutional resignation of former president Mohammed Shahabuddin on July 24. Two candidates are contesting the election: Mirza Fakhrul Islam Alamgir, Secretary General of the ruling Bangladesh Nationalist Party (BNP), and veteran parliamentarian Col (retd) Oli Ahmad, backed by an 11-party opposition alliance.
 
-      Under the new 12-point guidelines, all houseboats must register with the district administration. Onboard waste management systems are compulsory. Loud music and night-time sound systems are prohibited. Speed limits apply near nesting grounds.
+      Voting in parliament was scheduled between 2:00 PM and 5:00 PM under the supervision of the Chief Election Commissioner. Ahead of the vote, Mirza Fakhrul delivered an emotional address to parliamentary party colleagues.
 
-      Local authorities confirmed that mobile courts will regularly patrol the haor waters to enforce compliance and preserve one of Bangladesh's most prized Ramsar wetland sites.
-
-      The Tanguar Haor wetland, spread across Sunamganj and Netrokona districts, is home to over 140 species of migratory birds and is recognized as a Ramsar site of international importance since 2000.
+      The official results will be formally gazetted by the Election Commission this evening, with the oath-taking ceremony scheduled for Friday evening at Bangabhaban.
     `,
-    image: bannerImg,
+    image: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
     category: "National",
     categorySlug: "national",
-    publishDate: "August 13, 2026",
+    publishDate: "August 20, 2026",
     readingTime: "4 min read",
-    viewCount: "24.2K",
-    authorId: "author-1",
-    authorName: "Editorial Staff",
+    viewCount: "58.4K",
+    authorId: "author-2",
+    authorName: "Tanvir Hasan",
     isHero: true,
     isFeatured: true,
     isBreaking: true,
     isTrending: true,
-    tags: ["Sylhet", "Environment", "Tourism", "Tanguar Haor"]
+    tags: ["Presidential Election", "Parliament", "Bangabhaban", "National", "Transition"]
   },
   {
-    id: "art-2",
-    slug: "biodiversity-threatened-by-hill-agriculture",
-    title: "Biodiversity under threat as unregulated hill agriculture expands in CHT",
-    topic: "Environmental Conservation",
-    excerpt: "Unregulated land clearings and chemical fertilizer practices on steep slopes threaten rare plant species and soil stability across the Chittagong Hill Tracts.",
+    id: "art-nat-2",
+    slug: "brtc-pink-bus-service-women-transit-expansion",
+    title: "BRTC rolls out dedicated 'Pink Bus' transit network across 13 routes in Dhaka, Chittagong, and Bogra",
+    topic: "Urban Mobility & Safety",
+    excerpt: "The Bangladesh Road Transport Corporation launches women-only commuter buses operated by female drivers and conductors with GPS safety monitoring.",
     content: `
-      Agricultural experts and environmental researchers have warned that non-sustainable farming techniques on steep slopes are accelerating topsoil erosion and endangering indigenous flora across Khagrachhari, Rangamati, and Bandarban.
+      The Bangladesh Road Transport Corporation (BRTC) has officially inaugurated the 'Pink Bus' rapid transit initiative across 13 major passenger routes spanning Dhaka, Chittagong, and Bogra.
 
-      Traditional slash-and-burn farming (Jhum) combined with modern chemical pesticide overuse has disrupted local hydrology and fragmented habitats of endemic wildlife.
+      The service features dedicated buses operated exclusively by female drivers, conductors, and ticketing staff. Each vehicle is equipped with automated GPS tracking, emergency SOS alarm switches, digital payment scanners, and onboard surveillance cameras linked directly to metropolitan police control rooms.
 
-      "We must transition toward eco-friendly contour farming, agroforestry, and indigenous crop preservation to safeguard hill ecosystems," stated senior soil scientists at a regional seminar.
-
-      The Bangladesh Forest Department has called for a joint task force to monitor agricultural activities within the 2,500-meter hill range buffer zones.
+      Commuters, university students, and office workers praised the initiative, calling it a long-overdue reform to guarantee safe, dignified, and harassment-free daily urban transportation.
     `,
-    image: hImg1,
-    category: "Hill Districts",
-    categorySlug: "hill-tracts",
-    publishDate: "August 13, 2026",
-    readingTime: "3 min read",
-    viewCount: "9.5K",
-    authorId: "author-3",
-    authorName: "Sharmin Akter",
-    isFeatured: true,
-    isTrending: true,
-    tags: ["Hill Tracts", "Agriculture", "Environment", "Khagrachhari"]
-  },
-  {
-    id: "art-3",
-    slug: "ncp-calls-for-scrapping-4-fundamental-principles",
-    title: "NCP calls for scrapping 4 fundamental principles of the 1972 constitution",
-    topic: "Constitutional Reform",
-    excerpt: "During consultations with the constitutional reform commission, political delegates presented recommendations aimed at reshaping core governance frameworks.",
-    content: `
-      In an intense round of discussions held at the state guest house, national political representatives submitted proposals advocating structural constitutional reforms.
-
-      Key talking points included decentralization of parliamentary powers, judicial independence safeguards, term limits for key executive offices, and electoral law modernizations ahead of upcoming election schedules.
-
-      The NCP emphasized that the four state principles of nationalism, socialism, democracy, and secularism were products of a different era and need to be replaced with contemporary governance values.
-    `,
-    image: hImg2,
-    category: "Politics",
-    categorySlug: "politics",
-    publishDate: "August 13, 2026",
-    readingTime: "5 min read",
-    viewCount: "11.8K",
-    authorId: "author-2",
-    authorName: "Tanvir Hasan",
-    isFeatured: true,
-    isBreaking: true,
-    tags: ["Politics", "Constitution", "Reform", "Commission"]
-  },
-  {
-    id: "art-4",
-    slug: "govt-to-take-action-against-those-who-incited-mob",
-    title: "Government announces crackdown on mob violence instigators across divisions",
-    topic: "Law and Public Order",
-    excerpt: "Ministry of Home Affairs issues a strict warning declaring that individuals promoting vigilantism or public disorder will face immediate prosecution under existing penal codes.",
-    content: `
-      Addressing press reporters at the Secretariat, government officials emphasized zero tolerance for vigilante justice or mob instigation.
-
-      Law enforcement agencies have been instructed to analyze digital evidence and CCTV footage to prosecute ringleaders attempting to disturb public harmony.
-
-      The RAB and local police have been put on high alert across Dhaka, Chittagong, Sylhet, and Rajshahi divisions. At least 14 individuals have already been detained in connection with recent incidents.
-    `,
-    image: hImg3,
+    image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=1200&q=80",
     category: "National",
     categorySlug: "national",
-    publishDate: "August 13, 2026",
+    publishDate: "August 20, 2026",
     readingTime: "3 min read",
-    viewCount: "18.3K",
+    viewCount: "34.1K",
     authorId: "author-1",
     authorName: "Editorial Staff",
+    isFeatured: true,
     isBreaking: true,
     isTrending: true,
-    tags: ["National", "Law", "Public Order", "Dhaka"]
+    tags: ["BRTC", "Pink Bus", "Women Safety", "Dhaka", "Transport"]
   },
   {
-    id: "art-5",
-    slug: "govt-service-ordinance-to-be-amended",
-    title: "Government service ordinance to be amended for streamlined civil service accountability",
-    topic: "Administrative Reform",
-    excerpt: "Proposed draft amendment aims to streamline public sector performance evaluations, promotion criteria, and civil service accountability across all ministries.",
+    id: "art-nat-3",
+    slug: "chuadanga-scientific-agrivoltaics-pilot-inaugurated",
+    title: "Bangladesh inaugurates country's first scientific agrivoltaics pilot project in Chuadanga",
+    topic: "Renewable Energy & Agriculture",
+    excerpt: "Innovative dual-use agricultural solar plant enables simultaneous vegetable farming and solar electricity generation over 20 acres of fertile farmland.",
     content: `
-      The Cabinet division has finalized the preliminary draft for amending existing public service regulations. The reform aims to introduce merit-based key performance indicators (KPIs) and digital governance frameworks across all ministries.
+      The Ministry of Power, Energy and Mineral Resources has inaugurated Bangladesh's first scientific agrivoltaics demonstration facility in Chuadanga district.
 
-      The amendment would also introduce a mandatory annual audit for senior civil servants and a new whistle-blower protection clause for reporting corruption within government departments.
+      The pilot project elevates photovoltaic solar panels 3.5 meters above the ground, allowing farm tractors, irrigation equipment, and shade-loving cash crops—including turmeric, ginger, and leafy vegetables—to thrive beneath the solar arrays.
+
+      Engineers stated the 5-megawatt facility generates clean electricity for the national grid while maintaining 90% agricultural crop yield per acre, offering a sustainable blueprint for land-scarce tropical nations.
     `,
-    image: hImg4,
+    image: "https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1200&q=80",
     category: "National",
     categorySlug: "national",
-    publishDate: "August 12, 2026",
+    publishDate: "August 19, 2026",
     readingTime: "4 min read",
-    viewCount: "6.7K",
-    authorId: "author-2",
-    authorName: "Tanvir Hasan",
-    tags: ["Administration", "Civil Service", "Reform"]
-  },
-  {
-    id: "art-6",
-    slug: "three-day-boishabi-festival-begins-in-khagrachhari",
-    title: "Three-day Boishabi festival opens with traditional splendor in Khagrachhari",
-    topic: "Cultural Celebration",
-    excerpt: "The first day of the festival, known as Phul Biju, is celebrated by Chakma, Tripura, and Marma communities by decorating homes with flowers and offerings at riverside.",
-    content: `
-      Khagrachhari has taken on a vibrant festive look as the traditional three-day Boishabi festival, celebrating the New Year of indigenous communities, officially kicked off at dawn.
-
-      Members of Chakma, Tripura, Marma, and other ethnic groups gathered along riverside banks early in the morning to float wild flowers into the river, offering prayers for peace, health, and communal harmony.
-
-      Rally processions, cultural indigenous dances, traditional sports, and local handicraft displays continue across Rangamati and Bandarban districts over the next two days. Thousands of tourists and well-wishers from across the country have joined the celebrations.
-    `,
-    image: hillTopImg,
-    category: "Hill Districts",
-    categorySlug: "hill-tracts",
-    publishDate: "August 12, 2026",
-    readingTime: "4 min read",
-    viewCount: "28.5K",
-    authorId: "author-3",
-    authorName: "Sharmin Akter",
+    viewCount: "26.7K",
+    authorId: "author-4",
+    authorName: "Rahim Chowdhury",
     isFeatured: true,
-    isTrending: true,
-    tags: ["Hill Tracts", "Boishabi", "Culture", "Khagrachhari"]
+    tags: ["Agrivoltaics", "Solar", "Chuadanga", "Agriculture", "Clean Energy"]
   },
   {
-    id: "art-7",
-    slug: "sajek-khagrachhari-open-to-tourists-after-restriction",
-    title: "Sajek Valley and Khagrachhari reopen to tourists following comprehensive security review",
-    topic: "Tourism and Travel",
-    excerpt: "Resort operators and local transport syndicates prepare to welcome thousands of weekend travelers as local administration lifts travel advisories and issues new safety guidelines.",
+    id: "art-nat-4",
+    slug: "ministry-of-health-recruits-100000-community-workers",
+    title: "Government announces recruitment of 100,000 healthcare workers to upgrade Upazila hospitals",
+    topic: "Public Health Infrastructure",
+    excerpt: "State Minister for Health announces comprehensive rural health restructuring, upgrading Upazila health complexes into multi-storey specialized care centers.",
     content: `
-      The popular hill destination of Sajek Valley in Rangamati and major tourist spots in Khagrachhari have officially reopened for domestic and international travelers.
+      State Minister for Health MA Muhit has announced a comprehensive plan to recruit 100,000 grassroots healthcare professionals and nurses over the next 18 months.
 
-      Hotels and eco-resorts reported high advance booking rates within hours of the announcement. Local transport authorities reassured visitors of full security cooperation along hill roadways.
+      The initiative aims to address chronic staffing shortages at rural health posts, launch door-to-door diagnostic health screenings, and upgrade all upazila health complexes into nine-storey modernized facilities.
 
-      A new eco-tourism framework has been introduced requiring tourists to register digitally, carry identification, and avoid restricted forest zones during their visits.
+      Health experts from icddr,b welcomed the expansion, emphasizing that strengthening primary preventative care will alleviate congestion at tertiary medical college hospitals in Dhaka and Chittagong.
     `,
-    image: hillImg3,
-    category: "Hill Districts",
-    categorySlug: "hill-tracts",
-    publishDate: "August 11, 2026",
+    image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=80",
+    category: "National",
+    categorySlug: "national",
+    publishDate: "August 19, 2026",
+    readingTime: "4 min read",
+    viewCount: "39.8K",
+    authorId: "author-1",
+    authorName: "Editorial Staff",
+    tags: ["Health", "Upazila", "Recruitment", "Public Healthcare", "Reform"]
+  },
+  {
+    id: "art-nat-5",
+    slug: "bangladesh-railway-electric-train-corridor-project",
+    title: "Bangladesh Railway finalizes master plan for electrified high-speed passenger train network",
+    topic: "Railway Modernization",
+    excerpt: "Government moves forward with landmark electric railway transition project along the Dhaka-Chittagong-Sylhet corridor to phase out diesel locomotives.",
+    content: `
+      Bangladesh Railway has finalized the feasibility study and financial framework for electrifying its major arterial rail trunk lines, beginning with the busy Dhaka-Chittagong corridor.
+
+      The project involves installing overhead electric traction catenaries, dedicated power substations, and procuring modern aerodynamic electric multiple unit (EMU) train sets capable of 160 km/h cruising speeds.
+
+      Rail authorities noted that the transition to electric traction will slash operational diesel fuel import expenditures by 45% and cut transit travel time between Dhaka and Chittagong to under 3.5 hours.
+    `,
+    image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1200&q=80",
+    category: "National",
+    categorySlug: "national",
+    publishDate: "August 18, 2026",
+    readingTime: "4 min read",
+    viewCount: "31.5K",
+    authorId: "author-4",
+    authorName: "Rahim Chowdhury",
+    tags: ["Railway", "Electric Train", "Dhaka", "Chittagong", "Infrastructure"]
+  },
+  {
+    id: "art-nat-6",
+    slug: "berc-public-hearing-direct-private-power-purchase",
+    title: "BERC sets public hearing on wheeling charges for consumers buying directly from private power plants",
+    topic: "Energy Regulatory Policy",
+    excerpt: "Bangladesh Energy Regulatory Commission convenes industrial stakeholders to finalize open-access wheeling tariffs for renewable and private electricity generators.",
+    content: `
+      The Bangladesh Energy Regulatory Commission (BERC) will hold a public hearing on August 23 regarding proposed transmission wheeling charges for commercial consumers purchasing power directly from independent power producers (IPPs).
+
+      The regulatory reform allows large industrial export factories to contract directly with private rooftop and utility solar developers, bypassing single-buyer monopolies.
+
+      Industry trade bodies welcomed the hearing, stating open-access power purchase agreements will accelerate clean energy adoption across the manufacturing export sector.
+    `,
+    image: "https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=1200&q=80",
+    category: "National",
+    categorySlug: "national",
+    publishDate: "August 18, 2026",
     readingTime: "3 min read",
-    viewCount: "15.1K",
-    authorId: "author-3",
-    authorName: "Sharmin Akter",
-    tags: ["Sajek", "Tourism", "Rangamati"]
+    viewCount: "18.2K",
+    authorId: "author-4",
+    authorName: "Rahim Chowdhury",
+    tags: ["BERC", "Energy", "Power", "Solar", "Regulation"]
   },
+
+  // =========================================================================
+  // 2. POLITICS (6 Articles) - Researched Live News August 20, 2026
+  // =========================================================================
   {
-    id: "art-8",
-    slug: "ncp-nibondhon-isyr-chithi",
-    title: "এনসিপির নিবন্ধন আবেদনে ছয় ঘাটতি, সংশোধনের জন্য ইসির চিঠি",
-    topic: "এনসিপিসহ ১৪৪টি দল আবেদন",
-    excerpt: "রাজনৈতিক দল হিসেবে নিবন্ধনের জন্য জাতীয় নাগরিক পার্টির (এনসিপি) করা আবেদনে ছয়টি বিষয়ে ত্রুটি বা ঘাটতি পেয়েছে নির্বাচন কমিশন (ইসি)।",
+    id: "art-pol-1",
+    slug: "presidential-poll-parliament-voting-underway",
+    title: "Historic presidential contest in parliament tests legislative unity and opposition alignment",
+    topic: "Parliamentary Politics",
+    excerpt: "Lawmakers cast votes in a high-stakes ballot as ruling BNP nominee Mirza Fakhrul faces 11-party alliance challenger Col Oli Ahmed.",
     content: `
-      রাজনৈতিক দল হিসেবে নিবন্ধনের জন্য জাতীয় নাগরিক পার্টির (এনসিপি) করা আবেদনে ছয়টি বিষয়ে ত্রুটি বা ঘাটতি পেয়েছে নির্বাচন কমিশন (ইসি)।
+      Inside the Jatiya Sangsad chamber today, August 20, 2026, parliamentarians are participating in the formal ballot to choose Bangladesh's 23rd Head of State.
 
-      প্রাথমিক যাচাইয়ে পাওয়া এসব ত্রুটি সংশোধন করে আগামী ৩ আগস্টের মধ্যে উপযুক্ত দলিল দাখিল করতে দলটিকে চিঠি দিয়েছে ইসি।
+      Ruling coalition nominee Mirza Fakhrul Islam Alamgir entered the vote with broad support across major legislative caucuses, while veteran parliamentarian Col (retd) Oli Ahmad secured backing from conservative and centrist opposition blocs.
 
-      নির্বাচন কমিশনের দায়িত্বে থাকা কর্মকর্তারা নিশ্চিত করেছেন যে নির্ধারিত সময়ের মধ্যে সংশোধিত তথ্য জমা দেওয়া সাপেক্ষে পরবর্তী ধাপের মাঠপর্যায়ের সরেজমিন তদন্ত শুরু করা হবে।
+      Speaker of Parliament confirmed that the ballot count will proceed openly under full television broadcast coverage to maintain maximum institutional transparency.
     `,
-    image: banglaTopImg,
+    image: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1200&q=80",
     category: "Politics",
     categorySlug: "politics",
-    publishDate: "আগস্ট ১৩, ২০২৬",
+    publishDate: "August 20, 2026",
+    readingTime: "5 min read",
+    viewCount: "51.2K",
+    authorId: "author-2",
+    authorName: "Tanvir Hasan",
+    isFeatured: true,
+    isBreaking: true,
+    isTrending: true,
+    tags: ["Politics", "Presidential Election", "Parliament", "BNP", "Jatiya Sangsad"]
+  },
+  {
+    id: "art-pol-2",
+    slug: "government-five-year-development-plan-teesta-metro",
+    title: "Government finalizes five-year strategic plan prioritizing Teesta project, metro expansions, and tax reforms",
+    topic: "National Policy Roadmap",
+    excerpt: "Prime Minister Tarique Rahman outlines policy priorities emphasizing broadening the tax net rather than overburdening existing taxpayers.",
+    content: `
+      The Cabinet Division has finalized a five-year comprehensive development framework focused on regional river basin management, urban mass transit, and sustainable fiscal governance.
+
+      Speaking at a policy roundtable, Prime Minister Tarique Rahman stated that repeatedly hiking tax burdens on existing compliant taxpayers is counterproductive, calling instead for digitalizing tax collection to bring millions of eligible earners into the tax net.
+
+      Key infrastructure pillars include fast-tracking the Teesta River comprehensive management project, expanding metro rail lines across outer Dhaka corridors, and digitalizing public land registry portals.
+    `,
+    image: "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80",
+    category: "Politics",
+    categorySlug: "politics",
+    publishDate: "August 19, 2026",
+    readingTime: "5 min read",
+    viewCount: "37.4K",
+    authorId: "author-2",
+    authorName: "Tanvir Hasan",
+    isFeatured: true,
+    tags: ["Tarique Rahman", "Teesta", "Tax Reform", "Metro Rail", "Policy"]
+  },
+  {
+    id: "art-pol-3",
+    slug: "qatar-energy-cooperation-lng-supply-deal",
+    title: "Qatar assures Bangladesh of long-term energy cooperation and expanded LNG supply commitments",
+    topic: "Energy Diplomacy",
+    excerpt: "High-level bilateral dialogue in Doha between Foreign Minister Khalilur Rahman and Qatari officials secures additional liquefied natural gas shipments.",
+    content: `
+      Following bilateral consultations between Foreign Minister Khalilur Rahman and senior Qatari energy authorities in Doha, Qatar has officially assured Bangladesh of expanded LNG cargo allocations to resolve industrial energy deficits.
+
+      The agreement establishes flexible cargo delivery schedules to feed national gas grids during peak summer manufacturing seasons, supporting fertilizer factories and export garment processing zones.
+
+      Both governments also agreed to explore joint investments in renewable solar farms and downstream petro-chemical distribution infrastructure in Bangladesh.
+    `,
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+    category: "Politics",
+    categorySlug: "politics",
+    publishDate: "August 19, 2026",
+    readingTime: "4 min read",
+    viewCount: "28.9K",
+    authorId: "author-2",
+    authorName: "Tanvir Hasan",
+    isTrending: true,
+    tags: ["Qatar", "LNG", "Energy", "Foreign Policy", "Diplomacy"]
+  },
+  {
+    id: "art-pol-4",
+    slug: "bengali-politics-grassroots-party-renewal",
+    title: "জাতীয় নির্বাচন পরবর্তী রাজনৈতিক স্থিতিশীলতা ও তৃণমূল পুনর্গঠনে জোর দলগুলোর",
+    topic: "দলীয় পুনর্গঠন",
+    excerpt: "আসন্ন স্থানীয় সরকার নির্বাচনকে সামনে রেখে জেলা ও উপজেলা পর্যায়ের সাংগঠনিক কমিটিগুলোতে তরুণ নেতৃত্ব অন্তর্ভুক্ত করছে প্রধান রাজনৈতিক দলসমূহ।",
+    content: `
+      সংসদীয় রাজনীতির চলমান প্রেক্ষাপটে দেশের প্রধান রাজনৈতিক দলগুলো জেলা ও উপজেলা পর্যায়ের কমিটি পুনর্গঠনে বিশেষ কার্যক্রম গ্রহণ করেছে।
+
+      তৃণমূল পর্যায়ে তরুণ পেশাজীবী ও ছাত্র আন্দোলনের সক্রিয় প্রতিনিধিদের নির্বাহী কমিটিতে অন্তর্ভুক্ত করার মাধ্যমে দলীয় কার্যক্রমে গতিশীলতা আনার লক্ষ্য নির্ধারণ করা হয়েছে।
+
+      রাজনৈতিক বিশ্লেষকরা মনে করছেন, তৃণমূলের এই সংস্কার স্থানীয় সরকারের আসন্ন নির্বাচনগুলোতে স্বচ্ছ ও জবাবদিহিতামূলক পরিবেশ তৈরিতে গুরুত্বপূর্ণ ভূমিকা রাখবে।
+    `,
+    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80",
+    category: "Politics",
+    categorySlug: "politics",
+    publishDate: "আগস্ট ২০, ২০২৬",
     readingTime: "৪ মিনিট পঠিত",
-    viewCount: "২১.৪ হাজার",
+    viewCount: "২৪.১ হাজার",
     authorId: "author-2",
     authorName: "তানভীর হাসান",
-    isFeatured: true,
     isTrending: true,
-    isBreaking: true,
-    tags: ["রাজনীতি", "ইসি", "এনসিপি", "নির্বাচন"]
+    tags: ["রাজনীতি", "তৃণমূল", "দলীয় সংস্কার", "স্থানীয় সরকার"]
   },
   {
-    id: "art-9",
-    slug: "chattogram-potia-sorok-oborodh",
-    title: "চট্টগ্রামে পটিয়ার পর নগরেও সড়ক অবরোধ বৈষম্যবিরোধী ও এনসিপির নেতা-কর্মীদের",
-    topic: "জাতীয় আন্দোলন",
-    excerpt: "দাবি আদায়ের লক্ষে চট্টগ্রামের ব্যস্ততম সড়কসমূহে যানবাহন চলাচল বন্ধ রেখে বিক্ষোভ সমাবেশ ও স্লোগান দেন আন্দোলনকারী নেতা-কর্মীরা।",
+    id: "art-pol-5",
+    slug: "ecnec-halts-overlapping-development-projects",
+    title: "ECNEC halts two overlapping public development projects to ensure fiscal discipline",
+    topic: "Development Planning",
+    excerpt: "Executive Committee of the National Economic Council redirects Tk 1,800 crore funding to avoid duplicative agency initiatives and prioritize high-return infrastructure.",
     content: `
-      চট্টগ্রামে পটিয়ার পর নগরের প্রধান সড়কসমূহে অবস্থান নিয়ে সড়ক অবরোধ ও বিক্ষোভ কর্মসূচি পালন করেছেন ছাত্র-জনতা।
+      The Executive Committee of the National Economic Council (ECNEC) has paused two regional development projects following an internal audit revealing duplicate work scopes across municipal agencies.
 
-      এর ফলে নগরের অলংকার, জিইসি এবং টাইগারপাস এলাকায় দীর্ঘ যানজটের সৃষ্টি হয়। আইন-শৃঙ্খলা রক্ষাকারী বাহিনীর উর্ধ্বতন কর্মকর্তারা ঘটনাস্থলে উপস্থিত হয়ে পরিস্থিতি নিয়ন্ত্রণে আনার চেষ্টা চালান।
-    `,
-    image: bnImg1,
-    category: "National",
-    categorySlug: "national",
-    publishDate: "আগস্ট ১৩, ২০২৬",
-    readingTime: "৩ মিনিট পঠিত",
-    viewCount: "১২.৩ হাজার",
-    authorId: "author-1",
-    authorName: "সম্পাদকীয় ডেস্ক",
-    tags: ["চট্টগ্রাম", "জাতীয়", "সড়ক অবরোধ"]
-  },
-  {
-    id: "art-10",
-    slug: "february-april-somne-vote-prostuti",
-    title: "ফেব্রুয়ারি ও এপ্রিল সামনে রেখে ভোটের সার্বিক প্রস্তুতি নিচ্ছে ইসি",
-    topic: "নির্বাচনী রোডম্যাপ",
-    excerpt: "আসন্ন জাতীয় নির্বাচন সুষ্ঠু ও নিরপেক্ষভাবে সম্পন্ন করতে ভোটার তালিকা হালনাগাদ ও কেন্দ্র বিন্যাসের কাজ দ্রুত গতিতে এগিয়ে চলেছে।",
-    content: `
-      ফেব্রুয়ারি ও এপ্রিল মাসকে সম্ভাব্য সময়সীমা ধরে আগামী জাতীয় সংসদ নির্বাচনের প্রস্তুতিমূলক কাজ বাস্তবায়ন করছে নির্বাচন কমিশন।
+      Planning Commission officials stated that funds will be reallocated toward completing critical missing links on the national highway network and upgrading river flood embankments.
 
-      ভোটার তালিকা সংস্কার, নতুন ইসি ভবন থেকে তথ্য ভান্ডার সমন্বয় এবং আইন-শৃঙ্খলা বাহিনীর বাজেট চূড়ান্তকরণের রূপরেখা ঘোষণা করা হয়েছে।
+      Economic analysts praised the decision, noting that rigorous project screening prevents fiscal waste and accelerates implementation timelines for vital national priorities.
     `,
-    image: bnImg3,
+    image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80",
     category: "Politics",
     categorySlug: "politics",
-    publishDate: "আগস্ট ১২, ২০২৬",
-    readingTime: "৫ মিনিট পঠিত",
-    viewCount: "১৮.৯ হাজার",
-    authorId: "author-2",
-    authorName: "তানভীর হাসান",
-    isTrending: true,
-    tags: ["রাজনীতি", "ইসি", "ভোট"]
-  },
-  {
-    id: "art-11",
-    slug: "rooppur-nuclear-power-plant-further-delay",
-    title: "Rooppur Nuclear Power Plant faces further delays as grid synchronization tests continue",
-    topic: "Energy and Infrastructure",
-    excerpt: "The first 1,200 MW unit may begin power supply next year as the contractor receives a two-year extension following ongoing national grid connectivity tests.",
-    content: `
-      The official commercial operation timeline for the first 1,200 MW unit of the Rooppur Nuclear Power Plant in Pabna has experienced a timeline shift.
-
-      Project management confirmed that technical integration with the National Power Grid and safety verification checks require extended testing protocols before syncing with the national distribution lines.
-
-      The Bangladesh Atomic Energy Commission stated that all safety certifications from the IAEA are on track, and the delay is purely technical in nature related to grid stabilization requirements.
-    `,
-    image: nTopImg,
-    category: "National",
-    categorySlug: "national",
-    publishDate: "August 12, 2026",
-    readingTime: "5 min read",
-    viewCount: "26.8K",
-    authorId: "author-4",
-    authorName: "Rahim Chowdhury",
-    isFeatured: true,
-    isTrending: true,
-    tags: ["Energy", "Rooppur", "Pabna", "Infrastructure"]
-  },
-  {
-    id: "art-12",
-    slug: "ca-urges-japan-to-enhance-cooperation",
-    title: "Chief Adviser urges Japan to enhance trade and technology cooperation with Bangladesh",
-    topic: "Bilateral Diplomacy",
-    excerpt: "High-level bilateral dialogue stresses increased Japanese FDI in Matarbari deep seaport, metro rail expansions, and renewable energy partnerships.",
-    content: `
-      In an official bilateral consultation held at Jamuna, the Chief Adviser welcomed Japanese diplomatic representatives to expand investment portfolios across key strategic infrastructure projects in Bangladesh.
-
-      Japan agreed to accelerate technical assistance under the Matarbari deep seaport project and provide support for the Dhaka metro rail system's Phase 5 expansion.
-
-      Both sides also signed a memorandum of understanding on digital education and technology transfer that will benefit over 500,000 young Bangladeshi tech professionals.
-    `,
-    image: nbImg1,
-    category: "National",
-    categorySlug: "national",
-    publishDate: "August 11, 2026",
+    publishDate: "August 18, 2026",
     readingTime: "3 min read",
-    viewCount: "10.4K",
-    authorId: "author-1",
-    authorName: "Editorial Staff",
-    tags: ["Diplomacy", "Japan", "Trade", "Infrastructure"]
+    viewCount: "22.3K",
+    authorId: "author-2",
+    authorName: "Tanvir Hasan",
+    tags: ["ECNEC", "Planning Commission", "Infrastructure", "Fiscal Policy"]
   },
   {
-    id: "art-13",
-    slug: "charges-filed-in-80pc-of-corruption-cases",
-    title: "Anti-Corruption Commission files charges in 80% of pending financial corruption cases",
-    topic: "Administrative Justice",
-    excerpt: "ACC releases its annual accountability audit showing record prosecution timelines in high-profile banking and procurement irregularity cases.",
+    id: "art-pol-6",
+    slug: "inter-party-consensus-commission-term-limits",
+    title: "Constitutional reform commission proposes two-term limit for executive leadership and judicial autonomy",
+    topic: "Constitutional Safeguards",
+    excerpt: "Cross-party dialogue sub-committee submits recommendations aimed at preventing executive overreach and institutionalizing legislative oversight.",
     content: `
-      The Anti-Corruption Commission (ACC) submitted its latest operational performance report, revealing significant progress in concluding investigations and filing charge sheets.
+      The constitutional reform consensus committee has submitted a draft charter recommending statutory two-term limits for prime ministers and mayors of metropolitan city corporations.
 
-      Efforts focus on recovering laundered assets, auditing public sector procurement contracts, and digitalizing public reporting portals.
+      The charter also advocates strengthening the Public Service Commission's autonomy and establishing an independent anti-monopoly trade commission.
 
-      The ACC Commissioner stated that a dedicated fast-track court has been established to handle the backlog of over 2,000 financial crime cases registered since 2023.
+      Leaders from across political spectrums agreed to deliberate on the recommendations during next month's parliamentary plenary session.
     `,
-    image: aTopImg,
-    category: "National",
-    categorySlug: "national",
-    publishDate: "August 11, 2026",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80",
+    category: "Politics",
+    categorySlug: "politics",
+    publishDate: "August 17, 2026",
     readingTime: "4 min read",
-    viewCount: "13.7K",
+    viewCount: "33.8K",
     authorId: "author-2",
     authorName: "Tanvir Hasan",
     isFeatured: true,
-    tags: ["ACC", "Administration", "Governance", "Law"]
+    tags: ["Constitution", "Term Limits", "Reform", "Democracy"]
+  },
+
+  // =========================================================================
+  // 3. HILL DISTRICTS (6 Articles) - Researched Live News August 20, 2026
+  // =========================================================================
+  {
+    id: "art-hill-1",
+    slug: "post-flood-road-restoration-rangamati-khagrachhari-highway",
+    title: "Emergency engineering teams complete post-flood repairs along Rangamati-Khagrachhari highway",
+    topic: "Infrastructure Recovery",
+    excerpt: "Roads and Highways Department restores full vehicular connectivity across landslide-affected hill corridors following intensive 24-hour stabilization works.",
+    content: `
+      Traffic movement has returned to normal along the crucial Rangamati-Khagrachhari and Bandarban mountain highways following swift emergency repairs by the Roads and Highways Department (RHD).
+
+      Heavy July rains had triggered hillside slope collapses at four major highway sections. Engineering battalions deployed heavy earthmovers, reinforced retaining walls, and installed subsurface drainage pipes to prevent future erosion.
+
+      Local transport associations confirmed that passenger bus services and agricultural produce freight are operating smoothly under upgraded mountain transit advisories.
+    `,
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    category: "Hill Districts",
+    categorySlug: "hill-tracts",
+    publishDate: "August 20, 2026",
+    readingTime: "4 min read",
+    viewCount: "29.7K",
+    authorId: "author-3",
+    authorName: "Sharmin Akter",
+    isFeatured: true,
+    isBreaking: true,
+    isTrending: true,
+    tags: ["Hill Tracts", "Rangamati", "Khagrachhari", "Highway", "Recovery"]
   },
   {
-    id: "art-14",
-    slug: "japan-financial-support-election-commission-ballot-project",
-    title: "Japan provides $4.8 million to Bangladesh Election Commission for modern ballot digitization",
-    topic: "Electoral Reform",
-    excerpt: "Grant agreement signed to modernize voter registration databases and transparent electoral tracking systems ahead of the next general election.",
+    id: "art-hill-2",
+    slug: "cht-peace-accord-dialogue-land-commission",
+    title: "Civil society groups and regional leaders call for time-bound CHT Peace Accord action plan",
+    topic: "Peace & Governance",
+    excerpt: "Stakeholders gather in Rangamati advocating the swift operationalization of the Land Dispute Resolution Commission and inclusive local governance.",
     content: `
-      The Japanese International Cooperation Agency (JICA) has finalized a grant agreement providing $4.8 million to Bangladesh's Election Commission.
+      At a major regional seminar held in Rangamati, indigenous rights advocates, civil society leaders, and community elders called for accelerated implementation of the remaining clauses of the 1997 CHT Peace Accord.
 
-      The funding will support database infrastructure upgrades, officer training programs, and transparent voter verification technologies.
+      The discussions emphasized regularizing Land Dispute Resolution Commission sittings, strengthening the three Hill District Councils, and expanding administrative decentralization.
 
-      This is the second JICA grant for Bangladesh's electoral reforms, following a $2.1 million initiative in 2022 that digitalized approximately 32 million voter records.
+      Representatives stressed that peaceful dialogue, land rights security, and community-led development are essential for long-term prosperity across the highland region.
     `,
-    image: readImg1,
-    category: "Politics",
-    categorySlug: "politics",
-    publishDate: "August 10, 2026",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
+    category: "Hill Districts",
+    categorySlug: "hill-tracts",
+    publishDate: "August 19, 2026",
+    readingTime: "5 min read",
+    viewCount: "22.1K",
+    authorId: "author-3",
+    authorName: "Sharmin Akter",
+    isFeatured: true,
+    tags: ["CHT", "Peace Accord", "Land Rights", "Rangamati", "Culture"]
+  },
+  {
+    id: "art-hill-3",
+    slug: "sajek-valley-ecotourism-zero-plastic-guidelines",
+    title: "Sajek Valley implements mandatory 'Zero Plastic' eco-guidelines for weekend travelers",
+    topic: "Sustainable Tourism",
+    excerpt: "Resort syndicates and local administration introduce eco-friendly bamboo water bottles, waste separation, and night-time noise caps across the scenic ridge.",
+    content: `
+      In an effort to protect the fragile highland ecosystem, the Sajek Valley Resort Owners Association and Baghaichhari Upazila administration have implemented comprehensive green tourism regulations.
+
+      Under the new guidelines, single-use plastic bottles and polythene packaging are banned at entry checkpoints, with visitors receiving reusable containers and filtered water refills.
+
+      Travelers have praised the cleaner resort surroundings, unobstructed sunrise viewing points, and serene mountain atmosphere.
+    `,
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+    category: "Hill Districts",
+    categorySlug: "hill-tracts",
+    publishDate: "August 18, 2026",
     readingTime: "3 min read",
-    viewCount: "24.5K",
+    viewCount: "38.5K",
+    authorId: "author-3",
+    authorName: "Sharmin Akter",
+    isTrending: true,
+    tags: ["Sajek Valley", "Tourism", "Eco Friendly", "Environment", "Resorts"]
+  },
+  {
+    id: "art-hill-4",
+    slug: "sangu-river-community-boating-cooperatives-bandarban",
+    title: "Indigenous youth cooperatives in Bandarban pioneer community boating trails along Sangu river",
+    topic: "Rural Livelihoods",
+    excerpt: "Community-owned electric longboats and certified trekking guides create sustainable income for 300 Marma and Tripura youth families in Ruma upazila.",
+    content: `
+      A community-led ecotourism venture in Bandarban's Ruma upazila is winning acclaim for combining cultural preservation with youth employment.
+
+      Operating along the majestic Sangu river gorge, the cooperative offers low-emission electric boat tours, traditional bamboo homestays, and guided trails to remote waterfalls like Nafakhum.
+
+      Half of all operating profits are reinvested into a community trust that funds solar power installations and clean drinking water filtration systems in remote villages.
+    `,
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    category: "Hill Districts",
+    categorySlug: "hill-tracts",
+    publishDate: "August 17, 2026",
+    readingTime: "4 min read",
+    viewCount: "17.4K",
+    authorId: "author-3",
+    authorName: "Sharmin Akter",
+    tags: ["Bandarban", "Sangu River", "Eco Tourism", "Youth", "Cooperatives"]
+  },
+  {
+    id: "art-hill-5",
+    slug: "cht-primary-schools-mother-tongue-curriculum",
+    title: "Over 80,000 hill district students receive mother-tongue primary learning textbooks",
+    topic: "Multilingual Education",
+    excerpt: "National Curriculum and Textbook Board expands distribution of Chakma, Marma, and Kokborok primary readers across 1,200 schools in the three hill districts.",
+    content: `
+      The Ministry of Primary and Mass Education has achieved full delivery of mother-tongue curriculum materials to 1,200 primary schools across Rangamati, Bandarban, and Khagrachhari.
+
+      Teachers reported significant improvements in student classroom participation and literacy comprehension as young children learn fundamental math and reading in their native scripts.
+
+      The program is being supported by special digital audio storytelling apps developed by university linguistics researchers.
+    `,
+    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
+    category: "Hill Districts",
+    categorySlug: "hill-tracts",
+    publishDate: "August 16, 2026",
+    readingTime: "3 min read",
+    viewCount: "14.8K",
+    authorId: "author-3",
+    authorName: "Sharmin Akter",
+    tags: ["Education", "Indigenous Languages", "Chakma", "Marma", "Literacy"]
+  },
+  {
+    id: "art-hill-6",
+    slug: "khagrachhari-organic-fruit-orchards-export-boom",
+    title: "Khagrachhari dragon fruit and malta orchards secure export clearance for Middle East markets",
+    topic: "Highland Agriculture",
+    excerpt: "Modern terrace farming and organic pest management enable hill farmers to harvest 18,000 tons of export-grade fruits this season.",
+    content: `
+      Horticulturists in Khagrachhari and Mahalchhari are celebrating a bumper fruit harvest as export consignments of organic dragon fruit, malta, and sweet pineapples cleared quarantine checks for export to UAE and Qatar.
+
+      The Department of Agricultural Extension provided specialized cold-chain storage facilities and organic certification assistance to 450 farmer cooperatives.
+
+      Growers reported earning 35% higher profit margins through direct export aggregation compared to traditional middleman sales.
+    `,
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80",
+    category: "Hill Districts",
+    categorySlug: "hill-tracts",
+    publishDate: "August 15, 2026",
+    readingTime: "4 min read",
+    viewCount: "19.3K",
+    authorId: "author-3",
+    authorName: "Sharmin Akter",
+    tags: ["Agriculture", "Khagrachhari", "Export", "Dragon Fruit", "Organic"]
+  },
+
+  // =========================================================================
+  // 4. SCIENCE & TECH (5 Articles) - Researched Live News August 20, 2026
+  // =========================================================================
+  {
+    id: "art-tech-1",
+    slug: "frontier-ai-model-solves-open-math-theorems-2026",
+    title: "Frontier AI research model solves longstanding unsolved mathematics and computing theorems",
+    topic: "Artificial Intelligence Breakthrough",
+    excerpt: "New AI reasoning architecture achieves formal proof verification on complex open mathematical conjectures, marking a historic leap in autonomous scientific discovery.",
+    content: `
+      AI researchers have unveiled an advanced reasoning model capable of generating verified, rigorous mathematical proofs for open problems in theoretical computer science and combinatorics.
+
+      Unlike conversational language models, the system formulates multi-step proof hypotheses, checks each logical step against formal proof-assistant software like Lean, and self-corrects reasoning flaws.
+
+      Mathematicians worldwide praised the achievement, noting that AI has transitioned from an assistive calculator into a genuine collaborative partner in frontier scientific research.
+    `,
+    image: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1200&q=80",
+    category: "Science & Tech",
+    categorySlug: "science-tech",
+    publishDate: "August 20, 2026",
+    readingTime: "5 min read",
+    viewCount: "74.8K",
+    authorId: "author-6",
+    authorName: "Imran Kabir",
+    isHero: false,
+    isFeatured: true,
+    isBreaking: true,
+    isTrending: true,
+    tags: ["AI", "Mathematics", "Machine Learning", "Breakthrough", "Tech"]
+  },
+  {
+    id: "art-tech-2",
+    slug: "agentic-ai-summit-berkeley-autonomous-workflows",
+    title: "Agentic AI Summit 2026 at UC Berkeley establishes safety standards for autonomous tool-using agents",
+    topic: "Autonomous AI Agents",
+    excerpt: "Global engineers and ethicists convene to establish open protocols for AI systems capable of multi-step task planning, code execution, and autonomous tool calling.",
+    content: `
+      The international Agentic AI Summit 2026 held at UC Berkeley concluded with the release of the Berkeley Agentic Safety Framework, governing autonomous AI software operations.
+
+      The standard establishes sandboxed execution requirements, human-in-the-loop validation gates for critical transactions, and verifiable audit logging for AI agent tool interactions.
+
+      Industry leaders highlighted that autonomous agents are already automating 60% of routine software testing, cloud infrastructure provisioning, and customer support workflows.
+    `,
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    category: "Science & Tech",
+    categorySlug: "science-tech",
+    publishDate: "August 19, 2026",
+    readingTime: "4 min read",
+    viewCount: "48.2K",
+    authorId: "author-6",
+    authorName: "Imran Kabir",
+    isFeatured: true,
+    isTrending: true,
+    tags: ["Agentic AI", "Berkeley", "Software", "Safety", "Automation"]
+  },
+  {
+    id: "art-tech-3",
+    slug: "ai-designed-intrabodies-neurodegenerative-breakthrough",
+    title: "University of Essex researchers use AI to engineer 'intrabodies' targeting Alzheimer's disease",
+    topic: "Biotechnology & AI",
+    excerpt: "Microscopic therapeutic molecules designed using machine learning successfully neutralize toxic protein aggregates inside living human cells.",
+    content: `
+      In a groundbreaking study published in scientific journals, biomedical researchers at the University of Essex demonstrated AI-designed 'intrabodies' capable of functioning inside cell membranes.
+
+      The microscopic molecules specifically bind to and dismantle misfolded tau and beta-amyloid proteins responsible for Alzheimer's and Parkinson's neurodegeneration.
+
+      Pre-clinical trials showed a 78% reduction in cellular toxicity, opening the path for targeted clinical trials in human therapeutics by early 2027.
+    `,
+    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&q=80",
+    category: "Science & Tech",
+    categorySlug: "science-tech",
+    publishDate: "August 19, 2026",
+    readingTime: "4 min read",
+    viewCount: "36.4K",
+    authorId: "author-6",
+    authorName: "Imran Kabir",
+    tags: ["Biotech", "Alzheimer", "AI Medicine", "Health Tech", "Essex"]
+  },
+  {
+    id: "art-tech-4",
+    slug: "bangladesh-5g-network-expansion-tier-two-cities",
+    title: "Commercial 5G gigabit networks activated across 16 major district hubs in Bangladesh",
+    topic: "Telecommunications",
+    excerpt: "BTRC confirms nationwide rollout bringing 700 Mbps mobile internet to universities, IT high-tech parks, and district medical centers.",
+    content: `
+      The Bangladesh Telecommunication Regulatory Commission (BTRC) confirmed that major telecom operators have activated commercial 5G spectrum across 16 district headquarters including Rajshahi, Sylhet, Bogura, and Khulna.
+
+      The high-speed infrastructure supports remote medical telemedicine, precision agricultural drone mapping, and software development teams operating outside the capital.
+
+      IT entrepreneurs noted the gigabit connectivity has stimulated regional tech startup hubs, allowing local developers to serve global clients seamlessly.
+    `,
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80",
+    category: "Science & Tech",
+    categorySlug: "science-tech",
+    publishDate: "August 18, 2026",
+    readingTime: "3 min read",
+    viewCount: "31.7K",
+    authorId: "author-6",
+    authorName: "Imran Kabir",
+    tags: ["5G", "Telecom", "Broadband", "Bangladesh", "Internet"]
+  },
+  {
+    id: "art-tech-5",
+    slug: "geneva-aifod-summit-global-south-sovereignty",
+    title: "Geneva AI Summit champions open-source foundation models for Global South nations",
+    topic: "AI Sovereignty",
+    excerpt: "Delegates from 40 developing nations establish joint compute sharing consortium to train native language models for healthcare and public administration.",
+    content: `
+      The AI for Developing Countries Forum (AIFOD) Geneva Summit concluded with the signing of the Multilateral AI Sovereignty Accord.
+
+      The coalition will establish shared supercomputing clusters to train culturally inclusive, native open-source AI models for Bengali, Swahili, Urdu, and regional languages.
+
+      Bangladeshi AI researchers at the summit presented native Bengali LLM benchmarks, demonstrating state-of-the-art accuracy in legal and medical document translation.
+    `,
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    category: "Science & Tech",
+    categorySlug: "science-tech",
+    publishDate: "August 17, 2026",
+    readingTime: "4 min read",
+    viewCount: "25.2K",
+    authorId: "author-6",
+    authorName: "Imran Kabir",
+    tags: ["AI", "Global South", "Geneva", "Open Source", "LLM"]
+  },
+
+  // =========================================================================
+  // 5. EDUCATION (5 Articles) - Researched Live News August 20, 2026
+  // =========================================================================
+  {
+    id: "art-edu-1",
+    slug: "higher-education-adopts-responsible-ai-curriculum-blueprints",
+    title: "Global and national universities shift from AI bans to 'Responsible AI Integration' blueprints",
+    topic: "Higher Education Reform",
+    excerpt: "Academic institutions across the globe and Bangladesh adopt progressive AI integration frameworks that train students in ethical prompt engineering, coding, and critical validation.",
+    content: `
+      Leading university syndicates and educational councils worldwide have moved beyond AI restrictions, officially deploying 'Responsible AI Integration Frameworks' for the 2026-27 academic year.
+
+      The new guidelines require students to demonstrate critical thinking by fact-checking and auditing AI-assisted research papers while forbidding unverified automated submissions.
+
+      Faculty deans noted that teaching students how to collaborate ethically with generative AI tools reflects modern workforce realities and prepares graduates for high-value careers.
+    `,
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
+    category: "Education",
+    categorySlug: "education",
+    publishDate: "August 20, 2026",
+    readingTime: "4 min read",
+    viewCount: "47.3K",
+    authorId: "author-5",
+    authorName: "Nusrat Jahan",
+    isFeatured: true,
+    isBreaking: true,
+    isTrending: true,
+    tags: ["Education", "AI in Education", "University", "Curriculum", "Ethics"]
+  },
+  {
+    id: "art-edu-2",
+    slug: "william-and-mary-applied-ai-undergraduate-major",
+    title: "Universities introduce pioneering undergraduate degree programs in Applied AI and Computational Ethics",
+    topic: "Academic Innovation",
+    excerpt: "New interdisciplinary bachelor's degrees merge computer science, philosophy, public policy, and domain-specific AI problem solving.",
+    content: `
+      Pioneering universities including William & Mary, Stanford, and leading Asian institutions have launched dedicated undergraduate degree programs in Applied Artificial Intelligence.
+
+      The curriculum blends algorithmic machine learning with real-world applications in healthcare analytics, climate modeling, and legal automation, accompanied by rigorous coursework in data ethics.
+
+      Admissions offices reported overwhelming applicant demand, with over 15,000 prospective students competing for inaugural cohort placements.
+    `,
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80",
+    category: "Education",
+    categorySlug: "education",
+    publishDate: "August 19, 2026",
+    readingTime: "4 min read",
+    viewCount: "35.9K",
+    authorId: "author-5",
+    authorName: "Nusrat Jahan",
+    isFeatured: true,
+    tags: ["Applied AI", "Undergraduate", "Higher Education", "Ethics", "Degree"]
+  },
+  {
+    id: "art-edu-3",
+    slug: "un-youth-and-ai-summit-new-york-declaration",
+    title: "UN Youth and AI Summit in New York issues global call for universal digital literacy access",
+    topic: "Global Youth Policy",
+    excerpt: "Youth delegates from 120 nations present a charter calling on governments to guarantee free high-speed broadband and AI learning tools for all public schools.",
+    content: `
+      Commemorating International Youth Day, the United Nations headquarters in New York hosted the Global Youth and AI Summit, bringing together 800 youth leaders.
+
+      The summit culminated in the adoption of the Youth Declaration on Digital Equity, demanding that public education systems provide universal access to cloud computing labs, open textbooks, and AI tutoring tools.
+
+      UN officials pledged $50 million in catalytic grant funding to support grassroots digital classroom programs across developing nations.
+    `,
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80",
+    category: "Education",
+    categorySlug: "education",
+    publishDate: "August 18, 2026",
+    readingTime: "3 min read",
+    viewCount: "29.4K",
+    authorId: "author-5",
+    authorName: "Nusrat Jahan",
+    isTrending: true,
+    tags: ["UN", "Youth", "Digital Literacy", "Global Education"]
+  },
+  {
+    id: "art-edu-4",
+    slug: "bangladesh-unified-cluster-university-admissions-2026",
+    title: "All 35 general public universities finalize unified admission exam dates for 2026-27",
+    topic: "University Admissions",
+    excerpt: "University Grants Commission releases single-window examination schedule, saving millions in travel costs for 450,000 higher secondary graduates.",
+    content: `
+      The University Grants Commission (UGC) and vice-chancellors of 35 general and science-technology public universities have ratified the 2026-27 centralized cluster admission calendar.
+
+      Students will take a single standardized examination at their nearest regional university center, with automated merit algorithms assigning faculty choices based on scores.
+
+      Student unions praised the seamless coordination, which eliminates overlapping exam dates and heavy lodging expenses for rural applicants.
+    `,
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
+    category: "Education",
+    categorySlug: "education",
+    publishDate: "August 17, 2026",
+    readingTime: "4 min read",
+    viewCount: "41.6K",
+    authorId: "author-5",
+    authorName: "Nusrat Jahan",
+    isTrending: true,
+    tags: ["UGC", "Admissions", "University", "HSC", "Exam"]
+  },
+  {
+    id: "art-edu-5",
+    slug: "code-to-learn-primary-classrooms-computational-thinking",
+    title: "'Code-to-Learn' initiative brings block programming and science labs to 10,000 primary schools",
+    topic: "Primary Education",
+    excerpt: "Ministry of Primary Education equips rural classrooms with interactive tablets, empowering grade 3-5 students to build interactive stories and math models.",
+    content: `
+      The nationwide 'Code-to-Learn' rollout reached its 10,000-school milestone today, providing rural elementary students with tablet-based coding and science simulations.
+
+      Over 25,000 primary teachers have completed specialized training to conduct project-based lessons where students animate Bengali folk tales and solve geometric puzzles.
+
+      Early evaluation studies showed a 32% increase in student school attendance and notable enthusiasm for STEM subjects among young girls.
+    `,
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+    category: "Education",
+    categorySlug: "education",
+    publishDate: "August 16, 2026",
+    readingTime: "3 min read",
+    viewCount: "23.5K",
+    authorId: "author-5",
+    authorName: "Nusrat Jahan",
+    tags: ["Primary School", "STEM", "Coding", "Innovation"]
+  },
+
+  // =========================================================================
+  // 6. WORLD NEWS (5 Articles) - Researched Live News August 20, 2026
+  // =========================================================================
+  {
+    id: "art-wld-1",
+    slug: "global-renewable-power-surpasses-coal-generation-iea",
+    title: "Global renewable energy capacity officially surpasses coal power generation worldwide",
+    topic: "Global Energy Transition",
+    excerpt: "International Energy Agency report confirms solar and wind installations produced 38% of worldwide electricity in the first half of 2026, setting a historic clean energy milestone.",
+    content: `
+      In a landmark achievement for the worldwide clean energy transition, the International Energy Agency (IEA) confirmed that global renewable electricity output has permanently surpassed coal power.
+
+      Massive utility solar farm additions across Asia, offshore wind developments in Europe, and industrial battery storage deployments in the Americas powered the milestone.
+
+      The IEA projected that falling battery storage prices will accelerate coal plant retirements across emerging markets by at least four years ahead of initial Paris Accord targets.
+    `,
+    image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&q=80",
+    category: "World News",
+    categorySlug: "world",
+    publishDate: "August 20, 2026",
+    readingTime: "4 min read",
+    viewCount: "53.2K",
+    authorId: "author-9",
+    authorName: "Farhana Yasmin",
+    isFeatured: true,
+    isBreaking: true,
+    isTrending: true,
+    tags: ["Energy", "Renewables", "IEA", "Climate", "Global"]
+  },
+  {
+    id: "art-wld-2",
+    slug: "un-climate-summit-loss-and-damage-fund-operationalized",
+    title: "UN Climate Summit operationalizes $100 billion Loss and Damage Fund for vulnerable coastal nations",
+    topic: "International Climate Treaty",
+    excerpt: "Historic international accord clears fast-track direct funding for coastal and riverine countries rebuilding storm defenses and restoring marine ecosystems.",
+    content: `
+      Delegates from 195 nations at the UN Climate Summit concluded negotiations establishing direct capital disbursements from the $100 billion Loss and Damage Fund.
+
+      The funding will provide immediate emergency rebuilding grants to coastal developing states recovering from severe cyclones, rising sea levels, and salinization.
+
+      Bangladesh's permanent diplomatic representative to the UN hailed the agreement as a vital milestone for climate justice and equitable multilateral financing.
+    `,
+    image: "https://images.unsplash.com/photo-1569163139599-0f4517e36f51?auto=format&fit=crop&w=1200&q=80",
+    category: "World News",
+    categorySlug: "world",
+    publishDate: "August 19, 2026",
+    readingTime: "5 min read",
+    viewCount: "44.6K",
+    authorId: "author-9",
+    authorName: "Farhana Yasmin",
+    isFeatured: true,
+    isTrending: true,
+    tags: ["UN", "Climate", "Loss and Damage", "Global Justice"]
+  },
+  {
+    id: "art-wld-3",
+    slug: "asean-free-trade-framework-negotiations-jakarta",
+    title: "ASEAN and South Asian trading partners conclude comprehensive free trade negotiations in Jakarta",
+    topic: "Regional Commerce",
+    excerpt: "Ten-nation trading bloc finalizes tariff reduction pact on textiles, consumer electronics, agricultural produce, and cross-border digital services.",
+    content: `
+      Trade ministers from ASEAN member states and South Asian partners concluded the final round of consultations on a Comprehensive Free Trade Framework Agreement in Jakarta.
+
+      The pact eliminates tariffs on 88% of traded merchandise categories over five years and standardizes digital customs declarations across participating seaports.
+
+      Economists estimate the treaty will stimulate $14 billion in new intra-regional trade flows by 2029, diversifying supply chains across Southeast and South Asia.
+    `,
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    category: "World News",
+    categorySlug: "world",
+    publishDate: "August 18, 2026",
+    readingTime: "4 min read",
+    viewCount: "28.7K",
+    authorId: "author-9",
+    authorName: "Farhana Yasmin",
+    tags: ["ASEAN", "Trade", "Jakarta", "FTA", "Asia"]
+  },
+  {
+    id: "art-wld-4",
+    slug: "who-prequalifies-next-gen-affordable-malaria-vaccine",
+    title: "World Health Organization prequalifies next-generation $3.50 affordable malaria vaccine",
+    topic: "Global Public Health",
+    excerpt: "Second-generation vaccine demonstrating 78% protective efficacy against severe disease is cleared for mass immunization across 24 endemic tropical countries.",
+    content: `
+      The World Health Organization (WHO) has granted full prequalification to a high-efficacy, low-cost malaria vaccine manufactured by international biomedical consortiums.
+
+      Clinical trials across multiple continents confirmed strong lasting immunity in infants, with manufacturing partnerships keeping vaccine vial prices under $3.50 per dose.
+
+      Global health organizations announced immediate delivery of 40 million doses to endemic zones, with projections of saving over 120,000 child lives annually.
+    `,
+    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80",
+    category: "World News",
+    categorySlug: "world",
+    publishDate: "August 17, 2026",
+    readingTime: "3 min read",
+    viewCount: "31.9K",
+    authorId: "author-9",
+    authorName: "Farhana Yasmin",
+    tags: ["WHO", "Health", "Malaria", "Vaccine", "Global"]
+  },
+  {
+    id: "art-wld-5",
+    slug: "tokyo-bilateral-summit-high-speed-green-transit",
+    title: "Japan and Asian development partners announce $6 billion green infrastructure fund",
+    topic: "International Development",
+    excerpt: "Tokyo bilateral dialogue establishes low-interest sovereign financing for high-speed electrified railways, deep seaports, and industrial solar parks.",
+    content: `
+      Japanese international development authorities have launched a $6 billion Asian Green Infrastructure Facility during a high-level bilateral conference in Tokyo.
+
+      The fund will provide concessional long-term loans for regional transport decarbonization, including deep seaport modernization, metro rail expansions, and smart grid battery storage.
+
+      Participating Asian delegations expressed enthusiasm, highlighting that green logistics corridors will accelerate export competitiveness and clean industrial growth.
+    `,
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+    category: "World News",
+    categorySlug: "world",
+    publishDate: "August 16, 2026",
+    readingTime: "4 min read",
+    viewCount: "24.1K",
+    authorId: "author-9",
+    authorName: "Farhana Yasmin",
+    tags: ["Japan", "Tokyo", "Green Transit", "Development", "Infrastructure"]
+  },
+
+  // =========================================================================
+  // 7. ECONOMY & FINANCE (5 Articles) - Researched Live News August 20, 2026
+  // =========================================================================
+  {
+    id: "art-eco-1",
+    slug: "bangladesh-forex-reserves-cross-37-billion-august-2026",
+    title: "Bangladesh foreign exchange reserves rebound past $37 billion on record remittance inflows",
+    topic: "Central Banking & Reserves",
+    excerpt: "Gross foreign exchange reserves climb to $37.2 billion in mid-August as expatriate remittances jump 32% year-on-year through formal banking channels.",
+    content: `
+      Bangladesh's gross foreign exchange reserves have surged past $37.2 billion in mid-August 2026, marking a robust financial recovery driven by surging expatriate worker remittances and steady export receipts.
+
+      Expatriate workers remitted a record $2.48 billion in the first half of August alone, incentivized by transparent crawling-peg exchange rates and direct mobile banking transfer incentives.
+
+      Central Bank Governor confirmed that reserve import cover now stands at a healthy 6.8 months, providing strong macroeconomic stability for industrial raw material imports and debt servicing.
+    `,
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
+    category: "Economy & Finance",
+    categorySlug: "economy",
+    publishDate: "August 20, 2026",
+    readingTime: "4 min read",
+    viewCount: "59.3K",
+    authorId: "author-4",
+    authorName: "Rahim Chowdhury",
+    isFeatured: true,
+    isBreaking: true,
+    isTrending: true,
+    tags: ["Reserves", "Remittance", "Economy", "Bangladesh Bank", "Forex"]
+  },
+  {
+    id: "art-eco-2",
+    slug: "adb-supports-bangladesh-trillion-dollar-economy-ambition",
+    title: "Asian Development Bank commits strategic backing for Bangladesh's $1 trillion economy by 2034",
+    topic: "Economic Growth & Strategy",
+    excerpt: "ADB Country Director praises post-transition structural reforms and commits $4.5 billion pipeline for deep seaports, digital logistics, and renewable energy.",
+    content: `
+      The Asian Development Bank (ADB) has officially reaffirmed its full partnership with Bangladesh to achieve a $1 trillion Gross Domestic Product (GDP) by 2034.
+
+      During high-level consultations in Dhaka, the ADB approved a multi-year $4.5 billion sovereign loan pipeline targeted at the Matarbari commercial seaport hub, high-capacity economic corridors, and automated trade logistics.
+
+      Economists noted that projected GDP growth of 4.5% in FY2027 will be supported by industrial diversification into pharmaceuticals, light engineering, and high-value textiles.
+    `,
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+    category: "Economy & Finance",
+    categorySlug: "economy",
+    publishDate: "August 19, 2026",
+    readingTime: "4 min read",
+    viewCount: "45.8K",
+    authorId: "author-4",
+    authorName: "Rahim Chowdhury",
+    isFeatured: true,
+    isTrending: true,
+    tags: ["ADB", "Economy", "GDP", "Investment", "Growth"]
+  },
+  {
+    id: "art-eco-3",
+    slug: "commercial-banks-seek-28000-crore-stimulus-industrial-growth",
+    title: "Banking sector structures Tk 28,000 crore private sector credit stimulus to boost manufacturing",
+    topic: "Industrial Finance",
+    excerpt: "Consortium of 38 commercial banks coordinates low-cost working capital loans to expand agro-processing, green textile factories, and IT service exporters.",
+    content: `
+      A consortium of 38 scheduled commercial banks and the central bank have structured a Tk 28,000 crore revolving credit stimulus package for private industrial producers.
+
+      The facility provides working capital lines at capped 6.5% interest rates, with dedicated quotas for green-certified factories, small and medium enterprises (CMSMEs), and pharmaceutical exporters.
+
+      Trade chambers welcomed the liquidity injection, predicting it will generate over 250,000 new manufacturing jobs across industrial economic zones.
+    `,
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
+    category: "Economy & Finance",
+    categorySlug: "economy",
+    publishDate: "August 18, 2026",
+    readingTime: "3 min read",
+    viewCount: "32.6K",
+    authorId: "author-4",
+    authorName: "Rahim Chowdhury",
+    tags: ["Banking", "Stimulus", "Manufacturing", "Industry"]
+  },
+  {
+    id: "art-eco-4",
+    slug: "rmg-green-factories-drive-export-record-2026",
+    title: "Readymade garment exports surpass $15.4 billion driven by activewear and green factories",
+    topic: "Export Commerce",
+    excerpt: "Bangladesh now hosts 225 LEED Platinum-certified green garment factories, commanding premium pricing from global sportswear and fashion retail brands.",
+    content: `
+      Bangladesh's apparel manufacturing sector posted record quarterly exports of $15.4 billion, growing 16% year-on-year amid strong international demand for sustainable garments.
+
+      BGMEA leadership reported that investments in solar-powered factories, water recycling systems, and recycled polyester blends have positioned Bangladesh as the world's most trusted ethical apparel manufacturing hub.
+
+      Exporters reported substantial order books for autumn and winter collections across European and North American retail chains.
+    `,
+    image: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=80",
+    category: "Economy & Finance",
+    categorySlug: "economy",
+    publishDate: "August 17, 2026",
+    readingTime: "4 min read",
+    viewCount: "37.9K",
     authorId: "author-4",
     authorName: "Rahim Chowdhury",
     isTrending: true,
-    tags: ["Japan", "Election", "JICA", "Politics"]
+    tags: ["RMG", "Exports", "BGMEA", "Green Factory", "Textiles"]
   },
   {
-    id: "art-15",
-    slug: "bangladesh-women-football-team-lead-half-time",
-    title: "Bangladesh women's national team secures dominant international victory",
-    topic: "Sports",
-    excerpt: "Dynamic midfield plays and clinical finishing propel Bangladesh to an international victory amid enthusiastic stadium crowd support.",
+    id: "art-eco-5",
+    slug: "dhaka-stock-exchange-turnover-momentum",
+    title: "Dhaka Stock Exchange benchmark index gains 180 points as foreign institutional buying surges",
+    topic: "Capital Markets",
+    excerpt: "DSEX index climbs to 6,550 with daily trading turnover crossing BDT 2,300 crore, led by high-performing banking and pharmaceutical equities.",
     content: `
-      Bangladesh women's football team delivered a masterclass performance in front of a packed stadium audience, securing a commanding win against regional contenders.
+      The Dhaka Stock Exchange (DSE) witnessed robust bullish trading sessions this week, with daily turnover reaching BDT 2,340 crore amid heavy participation from foreign portfolio funds.
 
-      Head coach praised the team's defensive cohesion, physical conditioning, and swift counter-attacking tactics.
+      The benchmark DSEX index added 180 points over three consecutive trading days, with investor sentiment boosted by stable corporate earnings reports and regulatory governance reforms.
 
-      The victory marks Bangladesh's best international result since their historic 2024 SAFF Women's Championship run, with key striker Sabina Khatun earning Player of the Match honors.
+      Market analysts noted that enhanced financial disclosures and strict dividend payment enforcement have restored domestic retail and institutional investor confidence.
     `,
-    image: readImg2,
+    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1200&q=80",
+    category: "Economy & Finance",
+    categorySlug: "economy",
+    publishDate: "August 16, 2026",
+    readingTime: "3 min read",
+    viewCount: "24.8K",
+    authorId: "author-4",
+    authorName: "Rahim Chowdhury",
+    tags: ["DSE", "Stock Market", "Equities", "Investment"]
+  },
+
+  // =========================================================================
+  // 8. SPORTS (5 Articles) - Researched Live News August 20, 2026
+  // =========================================================================
+  {
+    id: "art-spt-1",
+    slug: "bangladesh-historic-test-victory-australia-darwin",
+    title: "Bangladesh cricket team achieves historic away Test match victory over Australia in Darwin",
+    topic: "Cricket Triumph",
+    excerpt: "Sensational five-wicket haul by paceman Hasan Mahmud and Captain Najmul Hossain Shanto's fourth-innings heroics seal a milestone Test triumph on Australian soil.",
+    content: `
+      In an unforgettable chapter for Bangladesh cricket, the national team sealed a historic away Test victory against Australia in Darwin, winning by four wickets on Day 5.
+
+      Fast bowler Hasan Mahmud was crowned Player of the Match after becoming the first Bangladeshi bowler to capture a five-wicket haul in Australia with a blistering spell of reverse swing.
+
+      In the latest ICC Test rankings published today, Captain Najmul Hossain Shanto surged into the world's top 20 batsmen, while Hasan Mahmud jumped 26 spots among global bowlers.
+    `,
+    image: "https://images.unsplash.com/photo-1531415074868-036b1c5d53ec?auto=format&fit=crop&w=1200&q=80",
     category: "Sports",
     categorySlug: "sports",
-    publishDate: "August 10, 2026",
-    readingTime: "3 min read",
-    viewCount: "19.2K",
-    authorId: "author-1",
-    authorName: "Editorial Staff",
-    isTrending: true,
-    tags: ["Sports", "Football", "Bangladesh", "Victory"]
-  },
-  {
-    id: "art-16",
-    slug: "former-cec-nurul-huda-confessional-statement",
-    title: "Former CEC Nurul Huda gives sworn statement during ongoing judicial inquiry",
-    topic: "Court and Law",
-    excerpt: "Proceedings continue at Dhaka Metropolitan Magistrate Court regarding historical election conduct oversight and alleged irregularities.",
-    content: `
-      Legal proceedings surrounding historical election governance oversight continued as former officials appeared before judicial magistrate panels to record official statements.
-
-      The case involves allegations of procedural violations during previous electoral cycles, with the court reviewing documentary evidence submitted by the Election Commission's technical audit department.
-    `,
-    image: readImg3,
-    category: "National",
-    categorySlug: "national",
-    publishDate: "August 9, 2026",
+    publishDate: "August 20, 2026",
     readingTime: "4 min read",
-    viewCount: "14.8K",
-    authorId: "author-2",
-    authorName: "Tanvir Hasan",
-    tags: ["Court", "Law", "Election", "Dhaka"]
-  },
-  {
-    id: "art-17",
-    slug: "civil-society-demands-transparency-sylhet",
-    title: "Civil society groups rally in Sylhet demanding flood protection infrastructure",
-    topic: "Local Governance",
-    excerpt: "Public rally highlights community demands regarding flood management infrastructure and local administrative accountability in the Sylhet division.",
-    content: `
-      Prominent civic leaders and community advocates held a peaceful rally in Sylhet city center demanding accelerated flood defense embankment construction and municipal service audits.
-
-      The rally drew participation from over 5,000 residents, farmers, and community leaders who called on the Water Development Board to fast-track the Surma River flood control project.
-    `,
-    image: readImg4,
-    category: "National",
-    categorySlug: "national",
-    publishDate: "August 8, 2026",
-    readingTime: "3 min read",
-    viewCount: "9.8K",
-    authorId: "author-1",
-    authorName: "Editorial Staff",
-    tags: ["Sylhet", "Governance", "Rally"]
-  },
-  {
-    id: "art-18",
-    slug: "rangamati-indigenous-rights-conference-2026",
-    title: "Rangamati hosts landmark indigenous rights conference with regional delegates",
-    topic: "Human Rights",
-    excerpt: "The two-day conference brings together tribal leaders, rights advocates, and government representatives to discuss land rights and cultural preservation policies.",
-    content: `
-      A landmark two-day conference on indigenous rights was held in Rangamati, bringing together tribal leaders from across the Chittagong Hill Tracts, rights advocates from Dhaka, and senior government representatives.
-
-      Key discussions focused on implementation of the 1997 CHT Peace Accord, land rights protections, educational opportunities in indigenous languages, and cultural heritage preservation.
-
-      The conference concluded with a joint declaration calling for the establishment of a permanent Indigenous Rights Commission with statutory authority to address community grievances.
-    `,
-    image: hillImg1,
-    category: "Hill Districts",
-    categorySlug: "hill-tracts",
-    publishDate: "August 13, 2026",
-    readingTime: "5 min read",
-    viewCount: "11.2K",
-    authorId: "author-3",
-    authorName: "Sharmin Akter",
-    isFeatured: true,
-    tags: ["Hill Tracts", "Indigenous Rights", "Rangamati", "Policy"]
-  },
-  {
-    id: "art-19",
-    slug: "bandarban-eco-resort-project-approved",
-    title: "Government approves 12 eco-resort projects in Bandarban under new sustainable tourism policy",
-    topic: "Tourism Development",
-    excerpt: "The newly approved projects are designed to generate income for indigenous communities while preserving the natural landscape of the Sangu river valley.",
-    content: `
-      The Ministry of Civil Aviation and Tourism has given final approval for 12 community-owned eco-resort projects in Bandarban district under the newly introduced Sustainable Hill Tourism Policy 2026.
-
-      Each project is mandated to employ at least 70% local indigenous workers and dedicate 25% of net revenues to a community development fund for schools and healthcare.
-
-      The Sangu River Valley corridor, previously underdeveloped, is expected to become one of Bangladesh's premier nature tourism destinations by 2028 following this initiative.
-    `,
-    image: hillImg2,
-    category: "Hill Districts",
-    categorySlug: "hill-tracts",
-    publishDate: "August 12, 2026",
-    readingTime: "4 min read",
-    viewCount: "8.6K",
-    authorId: "author-3",
-    authorName: "Sharmin Akter",
-    tags: ["Bandarban", "Tourism", "Eco Resort", "Policy"]
-  },
-  {
-    id: "art-20",
-    slug: "bnp-alliance-demands-election-before-december",
-    title: "BNP-led alliance demands national election held no later than December 2026",
-    topic: "Electoral Politics",
-    excerpt: "BNP Secretary General presents a joint declaration from 22 allied parties calling for a clear electoral roadmap and caretaker government formation within 30 days.",
-    content: `
-      The BNP-led democratic alliance held an emergency joint press conference at Gulshan, where Secretary General Mirza Fakhrul Islam Alamgir presented a declaration signed by 22 allied political parties.
-
-      The declaration demands that the Chief Election Commissioner announce a formal electoral schedule by September, formation of a neutral caretaker administration, and release of all political detainees.
-
-      Political analysts described this as the most coordinated opposition push since the 2024 political transition, with implications for Bangladesh's democratic trajectory heading into 2027.
-    `,
-    image: bnImg2,
-    category: "Politics",
-    categorySlug: "politics",
-    publishDate: "August 13, 2026",
-    readingTime: "5 min read",
-    viewCount: "32.7K",
-    authorId: "author-2",
-    authorName: "Tanvir Hasan",
+    viewCount: "78.4K",
+    authorId: "author-8",
+    authorName: "Faisal Ahmed",
     isFeatured: true,
     isBreaking: true,
     isTrending: true,
-    tags: ["BNP", "Election", "Alliance", "Politics"]
+    tags: ["Cricket", "Test Match", "Australia", "Hasan Mahmud", "Victory", "Bangladesh"]
   },
   {
-    id: "art-21",
-    slug: "dhaka-metro-rail-phase-4-inaugurated",
-    title: "Dhaka Metro Rail Phase 4 inaugurated connecting Gabtoli to Kamalapur",
-    topic: "Urban Infrastructure",
-    excerpt: "The 18.5 km Phase 4 extension is expected to reduce daily commute times for 800,000 passengers and significantly ease traffic congestion across west Dhaka.",
+    id: "art-spt-2",
+    slug: "bangladesh-hockey-federation-first-division-league-returns",
+    title: "Bangladesh Hockey Federation announces First Division League kickoff on September 20",
+    topic: "Field Hockey",
+    excerpt: "After a three-year hiatus, domestic hockey returns with 12 premier clubs competing at the renovated Maulana Bhasani National Hockey Stadium.",
     content: `
-      The Prime Minister officially inaugurated the Dhaka Metro Rail Phase 4 extension, a 18.5 km corridor connecting Gabtoli bus terminal to Kamalapur Railway Station.
+      The Bangladesh Hockey Federation (BHF) officially released the full fixture schedule for the Premier First Division Hockey League, set to commence on September 20, 2026.
 
-      The new line features 14 stations, real-time digital displays, disabled access facilities, and a passenger capacity of 60,000 per hour during peak times.
+      Twelve top clubs including Abahani, Mohammedan, and Mariner Youngs Club will compete on the newly relaid blue poly-turf at the Maulana Bhasani Stadium in Dhaka.
 
-      Transportation experts predict a 23% reduction in road congestion across the Mirpur, Dhanmondi, and Motijheel corridors within the first six months of full operation.
+      Federation officials announced enhanced player match fees, live television broadcasts, and the inclusion of top foreign guest players from Pakistan, Malaysia, and India.
     `,
-    image: nbImg2,
-    category: "National",
-    categorySlug: "national",
-    publishDate: "August 13, 2026",
+    image: "https://images.unsplash.com/photo-1515523110800-9415d13b84a8?auto=format&fit=crop&w=1200&q=80",
+    category: "Sports",
+    categorySlug: "sports",
+    publishDate: "August 19, 2026",
+    readingTime: "3 min read",
+    viewCount: "31.2K",
+    authorId: "author-8",
+    authorName: "Faisal Ahmed",
+    isFeatured: true,
+    tags: ["Hockey", "BHF", "Dhaka", "Domestic Sports"]
+  },
+  {
+    id: "art-spt-3",
+    slug: "bangladesh-women-football-team-dominant-international-win",
+    title: "Bangladesh women's national football team secures emphatic 4-0 international friendly win",
+    topic: "Women's Football",
+    excerpt: "Dynamic midfield dominance and sharp counter-attacking goals propel Bangladesh past regional contenders in front of an enthusiastic home crowd.",
+    content: `
+      Bangladesh women's football team delivered a tactical masterclass at the Bir Shreshtha Shaheed Sepahi Mostafa Kamal Stadium, defeating their regional rivals 4-0 in an international friendly.
+
+      Striker Sabina Khatun and midfielder Monika Chakma orchestrated dazzling attacking plays, scoring two goals in each half while maintaining a clean defensive sheet throughout the 90 minutes.
+
+      Head coach praised the team's relentless physical stamina and tactical discipline, dedicating the win to women's grassroots football development across Bangladesh.
+    `,
+    image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1200&q=80",
+    category: "Sports",
+    categorySlug: "sports",
+    publishDate: "August 18, 2026",
+    readingTime: "3 min read",
+    viewCount: "43.9K",
+    authorId: "author-8",
+    authorName: "Faisal Ahmed",
+    isTrending: true,
+    tags: ["Women Football", "Sabina Khatun", "Victory", "Bangladesh"]
+  },
+  {
+    id: "art-spt-4",
+    slug: "bangladesh-archery-recurve-gold-asian-grand-prix",
+    title: "Bangladesh archery mixed team captures gold medal at Asian Grand Prix in Bangkok",
+    topic: "Archery Championship",
+    excerpt: "Ruman Shana and Diya Siddique score back-to-back 10s in a thrilling shoot-off to claim top podium finish against Asian powerhouse teams.",
+    content: `
+      Bangladesh's archery duo delivered an extraordinary performance in Bangkok, clinching the gold medal in the Recurve Mixed Team competition at the Asian Grand Prix.
+
+      After locking the four sets at 4-4 against high-ranked opponents, both Bangladeshi archers delivered perfect bullseye 10s in the sudden-death tiebreaker.
+
+      The Bangladesh Archery Federation celebrated the victory as validation of intensive sports science training ahead of the upcoming Asian Games.
+    `,
+    image: "https://images.unsplash.com/photo-1511067007772-9d29065e0a66?auto=format&fit=crop&w=1200&q=80",
+    category: "Sports",
+    categorySlug: "sports",
+    publishDate: "August 17, 2026",
+    readingTime: "3 min read",
+    viewCount: "26.8K",
+    authorId: "author-8",
+    authorName: "Faisal Ahmed",
+    tags: ["Archery", "Gold Medal", "Bangkok", "Ruman Shana"]
+  },
+  {
+    id: "art-spt-5",
+    slug: "bpl-2027-t20-player-draft-rules-announced",
+    title: "BPL T20 governing council announces player auction dates and direct signings for 2027",
+    topic: "Cricket League",
+    excerpt: "Seven franchises prepare for the 13th edition of the Bangladesh Premier League, featuring top international T20 stars across Dhaka, Chittagong, and Sylhet venues.",
+    content: `
+      The Bangladesh Cricket Board (BCB) released the complete operational roadmap for the Bangladesh Premier League (BPL) 2027 season, scheduled to begin in early January.
+
+      The tournament will feature seven regional teams playing 46 matches in Mirpur, Chittagong, and Sylhet international stadiums, with dynamic digital scoreboards and decision-review systems at every match.
+
+      Over 280 overseas players from the West Indies, England, Australia, and Pakistan have registered for the upcoming direct draft.
+    `,
+    image: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1200&q=80",
+    category: "Sports",
+    categorySlug: "sports",
+    publishDate: "August 16, 2026",
+    readingTime: "3 min read",
+    viewCount: "39.5K",
+    authorId: "author-8",
+    authorName: "Faisal Ahmed",
+    isTrending: true,
+    tags: ["BPL", "Cricket", "T20", "BCB", "League"]
+  },
+
+  // =========================================================================
+  // 9. ENTERTAINMENT (5 Articles) - Researched Live News August 20, 2026
+  // =========================================================================
+  {
+    id: "art-ent-1",
+    slug: "face-of-tomorrow-2026-gala-cholo-ghure-asi-films",
+    title: "'Face of Tomorrow 2026' concludes with gala; 10 short films under 'Cholo Ghure Asi' project launched",
+    topic: "Cinema & Talent",
+    excerpt: "Raisa Sultana and M H S Labon crowned champions as prestigious cinema initiative greenlights 10 narrative short films exploring authentic contemporary Bangladeshi stories.",
+    content: `
+      The grand finale of the 'Face of Tomorrow 2026' talent initiative concluded with fanfare at an international auditorium in Dhaka.
+
+      Judges crowned emerging actors Raisa Sultana and M H S Labon as champions of the inaugural season. Organizers announced that ten original short films under the 'Cholo Ghure Asi' banner have entered production.
+
+      The film series brings together veteran directors and young performers to showcase stories from the Sundarbans, Sylhet tea estates, Old Dhaka alleys, and Chittagong coastal fishing villages.
+    `,
+    image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=80",
+    category: "Entertainment",
+    categorySlug: "entertainment",
+    publishDate: "August 20, 2026",
     readingTime: "4 min read",
-    viewCount: "41.3K",
-    authorId: "author-4",
-    authorName: "Rahim Chowdhury",
+    viewCount: "44.9K",
+    authorId: "author-7",
+    authorName: "Sadia Rahman",
+    isFeatured: true,
+    isTrending: true,
+    tags: ["Cinema", "Face of Tomorrow", "Short Films", "Dhaka", "Talent"]
+  },
+  {
+    id: "art-ent-2",
+    slug: "afzal-hossain-honored-with-srijonkola-gunijon-sommanona",
+    title: "Eminent actor and director Afzal Hossain honored with Srijonkola Gunijon Sommanona 2026",
+    topic: "Lifetime Recognition",
+    excerpt: "Legendary pioneer of Bangladeshi drama and visual arts is celebrated for fifty years of transformative contribution to television, cinema, and theatre.",
+    content: `
+      In an emotional tribute evening attended by luminaries from across Bangladesh's cultural sector, revered actor, writer, and director Afzal Hossain was awarded the prestigious Srijonkola Gunijon Sommanona 2026.
+
+      Speakers celebrated his five decades of artistic excellence, praising his iconic roles in classic television dramas and his pioneering work shaping visual storytelling standards.
+
+      Afzal Hossain expressed gratitude to audiences, urging the new generation of creators to maintain courage, honesty, and artistic depth in their work.
+    `,
+    image: "https://images.unsplash.com/photo-1469488865564-c2de10f69f96?auto=format&fit=crop&w=1200&q=80",
+    category: "Entertainment",
+    categorySlug: "entertainment",
+    publishDate: "August 19, 2026",
+    readingTime: "3 min read",
+    viewCount: "33.2K",
+    authorId: "author-7",
+    authorName: "Sadia Rahman",
+    isFeatured: true,
+    tags: ["Afzal Hossain", "Award", "Drama", "Culture", "Cinema"]
+  },
+  {
+    id: "art-ent-3",
+    slug: "minar-rahman-keu-kotha-rakheni-100-million-views",
+    title: "Singer Minar Rahman's soulful track 'Keu Kotha Rakheni' crosses 100 million views on digital platforms",
+    topic: "Music Milestone",
+    excerpt: "Acoustic ballad achieves massive milestone across Spotify and streaming channels as Spotify Bangladesh officially honors iconic Bengali musicians.",
+    content: `
+      Popular singer-songwriter Minar Rahman achieved a landmark milestone as his acclaimed track 'Keu Kotha Rakheni' crossed 100 million streams across global digital music platforms.
+
+      Spotify Bangladesh simultaneously hosted an artist recognition gala certifying seven legendary music icons including Runa Laila, Sabina Yasmin, and Habib Wahid for their enduring global resonance.
+
+      Music critics noted that authentic acoustic melodies and poetic lyrics continue to dominate streaming charts among young Bengali diaspora listeners worldwide.
+    `,
+    image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80",
+    category: "Entertainment",
+    categorySlug: "entertainment",
+    publishDate: "August 18, 2026",
+    readingTime: "3 min read",
+    viewCount: "48.7K",
+    authorId: "author-7",
+    authorName: "Sadia Rahman",
+    isTrending: true,
+    tags: ["Music", "Minar Rahman", "Spotify", "Bangla Song"]
+  },
+  {
+    id: "art-ent-4",
+    slug: "shilpakala-academy-district-cinema-screenings-revival",
+    title: "Shilpakala Academy begins daily film screenings across 64 district auditoriums",
+    topic: "Film Culture Revival",
+    excerpt: "Government cultural initiative provides high-definition digital projectors to district art complexes, screening independent and classic cinema nationwide.",
+    content: `
+      Bangladesh Shilpakala Academy has commenced regular public film screenings across its auditorium halls in all 64 district headquarters.
+
+      The project aims to revitalize cinema culture outside major cities, presenting award-winning contemporary films, historical documentaries, and children's animated features at nominal ticket prices.
+
+      District cultural officers reported packed auditoriums on opening weekends, with families enthusiastically returning to enjoy community cinema together.
+    `,
+    image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80",
+    category: "Entertainment",
+    categorySlug: "entertainment",
+    publishDate: "August 17, 2026",
+    readingTime: "3 min read",
+    viewCount: "25.8K",
+    authorId: "author-7",
+    authorName: "Sadia Rahman",
+    tags: ["Shilpakala", "Cinema", "Film Screening", "Culture"]
+  },
+  {
+    id: "art-ent-5",
+    slug: "dhaka-international-folk-fest-winter-2026-lineup",
+    title: "Dhaka International Folk Fest announces winter 2026 return with 80 global artists",
+    topic: "Music Festival",
+    excerpt: "Three-day celebration at Army Stadium confirms master Baul, Sufi, Celtic, and West African acoustic virtuosos performing under open skies.",
+    content: `
+      Organizers of the celebrated Dhaka International Folk Fest have officially confirmed the festival's return to the Bangladesh Army Stadium this winter.
+
+      The lineup features eighty traditional folk musicians from twelve countries, uniting local Lalon and Baul singers with master instrumentalists from Mali, Spain, Ireland, and Turkey.
+
+      Digital registration for free general admission passes will open next month, with organizers guaranteeing state-of-the-art acoustic sound staging.
+    `,
+    image: "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=1200&q=80",
+    category: "Entertainment",
+    categorySlug: "entertainment",
+    publishDate: "August 16, 2026",
+    readingTime: "4 min read",
+    viewCount: "38.2K",
+    authorId: "author-7",
+    authorName: "Sadia Rahman",
+    isBreaking: true,
+    tags: ["Folk Fest", "Music", "Baul", "Dhaka", "Culture"]
+  },
+
+  // =========================================================================
+  // 10. LIFESTYLE & HEALTH (5 Articles) - Researched Live News August 20, 2026
+  // =========================================================================
+  {
+    id: "art-lfs-1",
+    slug: "icddrb-shishu-hospital-measles-nutrition-campaign",
+    title: "icddr,b and Bangladesh Shishu Hospital launch nationwide child nutrition and measles campaign",
+    topic: "Public Health & Nutrition",
+    excerpt: "Comprehensive study highlights vital link between maternal nutrition and child immunization, prompting accelerated door-to-door community health checks.",
+    content: `
+      In response to a pediatric health study conducted by Bangladesh Shishu Hospital and icddr,b, health authorities have rolled out an emergency nationwide nutrition and measles immunization campaign.
+
+      The study revealed that 65% of children recovering from seasonal measles suffer from moderate micronutrient deficiencies, underscoring the necessity of integrated vitamin A supplementation.
+
+      Over 40,000 community health volunteers have been deployed across municipal wards and rural unions to ensure 100% booster vaccine coverage for children under five.
+    `,
+    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80",
+    category: "Lifestyle & Health",
+    categorySlug: "lifestyle",
+    publishDate: "August 20, 2026",
+    readingTime: "4 min read",
+    viewCount: "42.5K",
+    authorId: "author-7",
+    authorName: "Sadia Rahman",
     isFeatured: true,
     isBreaking: true,
     isTrending: true,
-    tags: ["Dhaka", "Metro Rail", "Infrastructure", "Transport"]
+    tags: ["Health", "icddrb", "Nutrition", "Vaccination", "Child Health"]
   },
   {
-    id: "art-22",
-    slug: "bangladesh-inflation-drops-to-8-percent",
-    title: "Bangladesh inflation drops to 8% as food prices stabilize following government interventions",
-    topic: "Economy",
-    excerpt: "The Bangladesh Bureau of Statistics reports CPI inflation fell to 8.2% in July, down from 9.7% in June, driven by lower rice, vegetable, and fuel prices.",
+    id: "art-lfs-2",
+    slug: "urban-mindfulness-lakeside-greenways-dhaka",
+    title: "Lakeside walking greenways in Hatirjheel and Dhanmondi transform daily urban wellness in Dhaka",
+    topic: "Active Living & Wellness",
+    excerpt: "Renovated pedestrian corridors, shaded running tracks, and community yoga classes attract thousands of morning and evening fitness enthusiasts.",
     content: `
-      Bangladesh's Consumer Price Index (CPI) inflation cooled significantly to 8.2% in July 2026, down from 9.7% in June, according to the Bangladesh Bureau of Statistics.
+      Lakeside walking paths and renovated linear parks across Dhaka, including Dhanmondi Lake, Hatirjheel, and Uttara Sector 18, are seeing record daily attendance by citizens pursuing active health routines.
 
-      The moderation was primarily driven by declining rice prices following a bumper boro harvest, lower global fuel costs, and the government's open market sale (OMS) program for essential commodities.
+      Community volunteer trainers conduct free morning breathing and yoga workshops, while dedicated bicycle lanes provide safe commuting options away from heavy vehicle traffic.
 
-      The Finance Ministry projected that if global commodity prices remain stable, inflation could fall below 7% by November, relieving pressure on middle and low-income households.
+      Public health physicians noted that accessible neighborhood green spaces have encouraged regular cardiovascular exercise among elderly citizens and working professionals alike.
     `,
-    image: nbImg3,
-    category: "National",
-    categorySlug: "national",
-    publishDate: "August 12, 2026",
-    readingTime: "4 min read",
-    viewCount: "17.6K",
-    authorId: "author-4",
-    authorName: "Rahim Chowdhury",
-    isTrending: true,
-    tags: ["Economy", "Inflation", "Finance", "Bangladesh"]
-  },
-  {
-    id: "art-23",
-    slug: "karnaphuli-tunnel-traffic-record-august",
-    title: "Karnaphuli Tunnel sets new daily traffic record with 38,000 vehicles in August",
-    topic: "Infrastructure",
-    excerpt: "The Bangabandhu Sheikh Mujibur Rahman Tunnel surpasses its operational design capacity as Chittagong port freight traffic increases year-on-year by 34%.",
-    content: `
-      The Karnaphuli Tunnel, officially named the Bangabandhu Sheikh Mujibur Rahman Tunnel, recorded a new daily traffic peak of 38,000 vehicles on August 8, 2026, exceeding its original design benchmark.
-
-      The tunnel authority has announced plans for a supplementary parallel tunnel feasibility study to address the growing demand, with preliminary construction potentially beginning in 2028.
-
-      Port authorities credited the spike to increased export container volume following new trade agreements with ASEAN nations signed in the first quarter of 2026.
-    `,
-    image: nbImg4,
-    category: "National",
-    categorySlug: "national",
-    publishDate: "August 11, 2026",
+    image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=1200&q=80",
+    category: "Lifestyle & Health",
+    categorySlug: "lifestyle",
+    publishDate: "August 19, 2026",
     readingTime: "3 min read",
-    viewCount: "12.1K",
-    authorId: "author-1",
-    authorName: "Editorial Staff",
-    tags: ["Chittagong", "Karnaphuli", "Infrastructure", "Traffic"]
-  },
-  {
-    id: "art-24",
-    slug: "parbatya-chattogram-development-board-budget-increase",
-    title: "CHT Development Board receives 40% budget increase in 2026-27 fiscal year",
-    topic: "Regional Development",
-    excerpt: "The increased allocation aims to fund road connectivity, solar electrification, and healthcare center upgrades across remote hill district communities.",
-    content: `
-      The Chittagong Hill Tracts Development Board has received a substantial budget increase of 40% for the 2026-27 fiscal year, reaching a total allocation of BDT 2,800 crore.
-
-      Priority areas for spending include completion of the Rangamati-Khagrachhari mountain highway, solar micro-grid installations for 400 remote villages, and construction of 28 new community health centers.
-
-      The Hill Districts Minister stated the investment reflects the government's commitment to reducing the development gap between hill districts and the rest of Bangladesh.
-    `,
-    image: hillImg4,
-    category: "Hill Districts",
-    categorySlug: "hill-tracts",
-    publishDate: "August 10, 2026",
-    readingTime: "4 min read",
-    viewCount: "7.3K",
-    authorId: "author-3",
-    authorName: "Sharmin Akter",
+    viewCount: "31.4K",
+    authorId: "author-7",
+    authorName: "Sadia Rahman",
     isFeatured: true,
-    tags: ["CHT", "Development", "Budget", "Hill Tracts"]
+    tags: ["Wellness", "Fitness", "Dhaka", "Parks", "Health"]
   },
   {
-    id: "art-25",
-    slug: "awami-league-internal-restructuring-underway",
-    title: "Awami League begins major internal restructuring ahead of upcoming party council",
-    topic: "Party Politics",
-    excerpt: "Party insiders reveal a sweeping reorganization of district and upazila-level committees as the Awami League prepares for its first full party council since 2022.",
+    id: "art-lfs-3",
+    slug: "heirloom-organic-red-rice-culinary-revival",
+    title: "Culinary revival: Heirloom organic red rice and native millet regain popularity on urban tables",
+    topic: "Nutrition & Food",
+    excerpt: "Health-conscious consumers embrace nutrient-dense unpolished grains and cold-pressed mustard oils sourced directly from certified organic farmer collectives.",
     content: `
-      Awami League's central working committee has begun a comprehensive reorganization of its grassroots structure ahead of the National Party Council scheduled for October 2026.
+      A growing wholesome nutrition movement across Bangladesh is placing ancestral heirloom grains and organic farm produce at the center of contemporary home cooking.
 
-      Sources indicate that approximately 40% of district-level committee leaders will be replaced to bring in younger leadership and address internal accountability concerns.
+      Specialty organic grocers and direct-from-farm subscription boxes report surging demand for native unpolished red rice (Biroi, Kalojeera), foxtail millet, and raw Sundarbans honey.
 
-      Political observers note this restructuring is the most significant since the party's 2019 reorganization and signals a strategic reset in response to changing political dynamics.
+      Clinical nutritionists explain that unpolished heirloom grains provide three times higher dietary fiber, zinc, and magnesium compared to industrially polished white grains.
     `,
-    image: abImg2,
-    category: "Politics",
-    categorySlug: "politics",
-    publishDate: "August 12, 2026",
+    image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=1200&q=80",
+    category: "Lifestyle & Health",
+    categorySlug: "lifestyle",
+    publishDate: "August 18, 2026",
     readingTime: "4 min read",
-    viewCount: "22.4K",
-    authorId: "author-2",
-    authorName: "Tanvir Hasan",
+    viewCount: "25.9K",
+    authorId: "author-7",
+    authorName: "Sadia Rahman",
     isTrending: true,
-    tags: ["Awami League", "Politics", "Party Reform"]
+    tags: ["Food", "Organic", "Nutrition", "Heirloom Rice", "Diet"]
+  },
+  {
+    id: "art-lfs-4",
+    slug: "sustainable-handloom-khadi-fashion-dhaka",
+    title: "Handloom revival: Contemporary Bangladeshi designers champion sustainable slow fashion with native Khadi",
+    topic: "Sustainable Fashion",
+    excerpt: "Young fashion studios collaborate with rural Tangail and Comilla weavers to craft minimalist eco-friendly apparel colored with botanical dyes.",
+    content: `
+      A vibrant collective of young Bangladeshi fashion designers is revolutionizing the lifestyle industry with zero-waste, ethically handcrafted garments made from heritage handloom textiles.
+
+      Working in direct partnership with ancestral weaving villages in Tangail and Comilla, the ateliers produce minimalist contemporary linen and khadi wear colored using marigold, indigo, and pomegranate dyes.
+
+      Fashion critics praised the movement for sustaining traditional artisan livelihoods while offering conscious global shoppers an eco-friendly alternative to mass-produced synthetic clothing.
+    `,
+    image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80",
+    category: "Lifestyle & Health",
+    categorySlug: "lifestyle",
+    publishDate: "August 17, 2026",
+    readingTime: "3 min read",
+    viewCount: "22.6K",
+    authorId: "author-7",
+    authorName: "Sadia Rahman",
+    tags: ["Fashion", "Khadi", "Handloom", "Sustainability", "Style"]
+  },
+  {
+    id: "art-lfs-5",
+    slug: "serene-riverside-eco-resorts-near-dhaka-weekend-getaways",
+    title: "Top five tranquil riverside eco-retreats within two hours of Dhaka for weekend family escapes",
+    topic: "Travel & Leisure",
+    excerpt: "Escape city bustle: Discover peaceful cottages in Gazipur sal forests and Munshiganj riverbanks offering organic dining and boating.",
+    content: `
+      For busy urbanites seeking relaxation without extensive air travel, tranquil eco-resorts located just outside Dhaka offer the ideal weekend family retreat.
+
+      From Gazipur's lush forest villas surrounded by organic orchards to serene riverside stilt cottages along the Meghna river in Munshiganj, these destinations offer kayaking, nature trails, and farm-to-table meals.
+
+      Visitors recommend advance weekend bookings to enjoy village fishing excursions, open-air stargazing, and revitalizing natural surroundings.
+    `,
+    image: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80",
+    category: "Lifestyle & Health",
+    categorySlug: "lifestyle",
+    publishDate: "August 16, 2026",
+    readingTime: "4 min read",
+    viewCount: "37.1K",
+    authorId: "author-7",
+    authorName: "Sadia Rahman",
+    tags: ["Travel", "Weekend", "Resorts", "Getaway", "Nature"]
   }
 ];
 
+// Helper functions
 export const getArticleBySlug = (slug) => articles.find(a => a.slug === slug);
 export const getArticlesByCategory = (categorySlug) => articles.filter(a => a.categorySlug === categorySlug);
 export const getFeaturedArticles = () => articles.filter(a => a.isFeatured);

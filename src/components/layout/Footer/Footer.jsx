@@ -1,15 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { mainNavLinks, moreCategoryLinks, footerQuickLinks } from '../../../data/navigation';
 import { siteConfig } from '../../../data/siteConfig';
+import { useLanguage } from '../../../context/LanguageContext';
 import Icon from '../../common/Icon/Icon';
 import Button from '../../common/Button/Button';
 import './Footer.css';
 
 export const Footer = () => {
+  const { t } = useLanguage();
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  const quickLinks = [
+    { name: t('home'), path: '/' },
+    { name: t('aboutUs'), path: '/about' },
+    { name: t('contactUs'), path: '/contact' },
+    { name: t('privacyPolicy'), path: '/privacy' },
+    { name: t('termsOfService'), path: '/terms' },
+  ];
+
+  const categoryLinks = [
+    { name: t('national'), path: '/category/national' },
+    { name: t('politics'), path: '/category/politics' },
+    { name: t('hillTracts'), path: '/category/hill-tracts' },
+    { name: t('scienceTech'), path: '/category/science-tech' },
+    { name: t('education'), path: '/category/education' },
+    { name: t('world'), path: '/category/world' },
+    { name: t('economy'), path: '/category/economy' },
+    { name: t('sports'), path: '/category/sports' },
+  ];
+
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
-    alert('Thank you for subscribing to Third Angle newsletter!');
+    if (email.trim()) {
+      setIsSubscribed(true);
+      setEmail('');
+    }
   };
 
   return (
@@ -24,10 +50,10 @@ export const Footer = () => {
               <span className="brand-badge">NEWS</span>
             </Link>
             <p className="footer-about-text">
-              {siteConfig.description}
+              {t('footerAbout')}
             </p>
             <div className="footer-social-box">
-              <span className="social-box-title">Follow Third Angle</span>
+              <span className="social-box-title">{t('exploreByCategory')}</span>
               <div className="footer-social-icons">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Icon name="facebook" /></a>
                 <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><Icon name="twitter" /></a>
@@ -40,9 +66,9 @@ export const Footer = () => {
 
           {/* Column 2: Quick Links */}
           <div className="footer-col">
-            <h3 className="footer-col-title">Quick Links</h3>
+            <h3 className="footer-col-title">{t('quickLinks')}</h3>
             <ul className="footer-link-list">
-              {footerQuickLinks.map((link) => (
+              {quickLinks.map((link) => (
                 <li key={link.path}>
                   <Link to={link.path} className="footer-link">{link.name}</Link>
                 </li>
@@ -52,9 +78,9 @@ export const Footer = () => {
 
           {/* Column 3: Categories */}
           <div className="footer-col">
-            <h3 className="footer-col-title">Top Categories</h3>
+            <h3 className="footer-col-title">{t('categories')}</h3>
             <ul className="footer-link-list">
-              {[...mainNavLinks, ...moreCategoryLinks].slice(1, 8).map((link) => (
+              {categoryLinks.map((link) => (
                 <li key={link.path}>
                   <Link to={link.path} className="footer-link">{link.name}</Link>
                 </li>
@@ -64,21 +90,30 @@ export const Footer = () => {
 
           {/* Column 4: Newsletter & Contact */}
           <div className="footer-col newsletter-col">
-            <h3 className="footer-col-title">Newsletter</h3>
+            <h3 className="footer-col-title">{t('newsletterTitle')}</h3>
             <p className="newsletter-desc">
-              Subscribe to receive breaking news alerts and exclusive daily editorial briefings.
+              {t('newsletterSubtitle')}
             </p>
-            <form onSubmit={handleNewsletterSubmit} className="footer-newsletter-form">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                required
-                className="footer-email-input"
-              />
-              <Button type="submit" variant="primary" size="sm">
-                Subscribe
-              </Button>
-            </form>
+
+            {isSubscribed ? (
+              <div className="footer-subscribe-success">
+                <span>✓ {t('subscribedSuccess')}</span>
+              </div>
+            ) : (
+              <form onSubmit={handleNewsletterSubmit} className="footer-newsletter-form">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder={t('newsletterPlaceholder')}
+                  required
+                  className="footer-email-input"
+                />
+                <Button type="submit" variant="primary" size="sm">
+                  {t('subscribeButton')}
+                </Button>
+              </form>
+            )}
 
             <div className="footer-contact-info">
               <div className="contact-item">
@@ -95,11 +130,11 @@ export const Footer = () => {
 
         {/* Footer Bottom Bar */}
         <div className="footer-bottom">
-          <p className="copyright-text">{siteConfig.copyright}</p>
+          <p className="copyright-text">{t('allRightsReserved')}</p>
           <div className="legal-links">
-            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/privacy">{t('privacyPolicy')}</Link>
             <span className="dot">•</span>
-            <Link to="/terms">Terms of Service</Link>
+            <Link to="/terms">{t('termsOfService')}</Link>
           </div>
         </div>
       </div>

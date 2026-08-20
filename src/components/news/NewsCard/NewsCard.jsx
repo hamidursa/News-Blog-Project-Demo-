@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../../../context/LanguageContext';
 import CategoryBadge from '../CategoryBadge/CategoryBadge';
 import Icon from '../../common/Icon/Icon';
 import './NewsCard.css';
@@ -9,8 +10,10 @@ export const NewsCard = ({
   variant = 'vertical', // 'vertical', 'horizontal', 'compact'
   className = ''
 }) => {
+  const { translateArticle, t } = useLanguage();
   if (!article) return null;
 
+  const translated = translateArticle(article);
   const {
     slug,
     title,
@@ -21,9 +24,8 @@ export const NewsCard = ({
     categorySlug,
     publishDate,
     readingTime,
-    viewCount,
     authorName
-  } = article;
+  } = translated;
 
   return (
     <article className={`news-card card-${variant} ${className}`}>
@@ -72,7 +74,7 @@ export const NewsCard = ({
         </div>
 
         <Link to={`/news/${slug}`} className="card-read-more" aria-label={`Read full article: ${title}`}>
-          Read More <Icon name="arrowRight" />
+          {t('readMore')} <Icon name="arrowRight" className="read-more-arrow" />
         </Link>
       </div>
     </article>

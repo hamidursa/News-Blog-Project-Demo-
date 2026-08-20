@@ -1,15 +1,18 @@
 import React from 'react';
+import { useLanguage } from '../../../context/LanguageContext';
 import SectionTitle from '../../common/SectionTitle/SectionTitle';
 import SmallCard from '../../news/SmallCard/SmallCard';
 import { articleService } from '../../../services/articleService';
 import './MostRead.css';
 
-export const MostRead = ({ title = "Most Read", dark = false }) => {
+export const MostRead = ({ title, dark = false }) => {
+  const { t } = useLanguage();
   const articles = articleService.getMostRead(5);
+  const displayTitle = title || t('mostRead');
 
   return (
     <div className={`most-read-widget ${dark ? 'dark' : ''}`}>
-      <SectionTitle title={title} dark={dark} />
+      <SectionTitle title={displayTitle} dark={dark} />
       <div className="most-read-list">
         {articles.map((art, index) => (
           <SmallCard

@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { SearchProvider } from './context/SearchContext';
+import { LanguageProvider } from './context/LanguageContext';
 import Layout from './components/layout/Layout';
 import Loader from './components/common/Loader/Loader';
 
@@ -27,24 +28,26 @@ const ScrollToTopOnRoute = () => {
 const App = () => {
   return (
     <Router>
-      <SearchProvider>
-        <ScrollToTopOnRoute />
-        <Layout>
-          <Suspense fallback={<Loader fullPage={true} />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/news/:slug" element={<NewsDetails />} />
-              <Route path="/category/:slug" element={<Category />} />
-              <Route path="/search" element={<Search />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-        </Layout>
-      </SearchProvider>
+      <LanguageProvider>
+        <SearchProvider>
+          <ScrollToTopOnRoute />
+          <Layout>
+            <Suspense fallback={<Loader fullPage={true} />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/news/:slug" element={<NewsDetails />} />
+                <Route path="/category/:slug" element={<Category />} />
+                <Route path="/search" element={<Search />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </Layout>
+        </SearchProvider>
+      </LanguageProvider>
     </Router>
   );
 };

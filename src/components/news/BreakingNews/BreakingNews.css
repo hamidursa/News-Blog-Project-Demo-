@@ -100,6 +100,19 @@
   }
 }
 
+@keyframes smoothMarqueeRTL {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+[dir="rtl"] .breaking-marquee-track {
+  animation-name: smoothMarqueeRTL;
+}
+
 @media (max-width: 640px) {
   .breaking-label span {
     display: none;

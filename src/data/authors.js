@@ -27,8 +27,48 @@ export const authors = [
     id: "author-4",
     name: "Rahim Chowdhury",
     nameBn: "রহিম চৌধুরী",
-    role: "Economic & Tech Analyst",
-    bio: "Focuses on emerging technologies, financial sector reforms, and South Asian trade.",
+    role: "Economic Analyst",
+    bio: "Focuses on financial sector reforms, trade policies, inflation metrics, and South Asian markets.",
+    avatar: "/src/assets/Image/footlogo.png"
+  },
+  {
+    id: "author-5",
+    name: "Nusrat Jahan",
+    nameBn: "নুসরাত জাহান",
+    role: "Education & Campus Correspondent",
+    bio: "Specialist in higher education policy, university governance, curriculum reform, and student affairs.",
+    avatar: "/src/assets/Image/footlogo.png"
+  },
+  {
+    id: "author-6",
+    name: "Imran Kabir",
+    nameBn: "ইমরান কবির",
+    role: "Science & Technology Editor",
+    bio: "Covering AI breakthroughs, digital infrastructure, telecommunications, software ecosystems, and space exploration.",
+    avatar: "/src/assets/Image/footlogo.png"
+  },
+  {
+    id: "author-7",
+    name: "Sadia Rahman",
+    nameBn: "সাদিয়া রহমান",
+    role: "Culture, Entertainment & Lifestyle Writer",
+    bio: "Writing on cinema, performing arts, literature, mental health, culinary traditions, and travel.",
+    avatar: "/src/assets/Image/footlogo.png"
+  },
+  {
+    id: "author-8",
+    name: "Faisal Ahmed",
+    nameBn: "ফয়সাল আহমেদ",
+    role: "Senior Sports Correspondent",
+    bio: "Veteran sports journalist covering Bangladesh cricket, international football tournaments, and athletics.",
+    avatar: "/src/assets/Image/footlogo.png"
+  },
+  {
+    id: "author-9",
+    name: "Farhana Yasmin",
+    nameBn: "ফারহানা ইয়াসমিন",
+    role: "International Affairs Analyst",
+    bio: "Expert on South Asian geopolitics, UN treaties, international trade corridors, and global environmental summits.",
     avatar: "/src/assets/Image/footlogo.png"
   }
 ];

@@ -1,14 +1,28 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { mainNavLinks, moreCategoryLinks } from '../../../data/navigation';
 import { siteConfig } from '../../../data/siteConfig';
+import { useLanguage } from '../../../context/LanguageContext';
 import Icon from '../../common/Icon/Icon';
+import LanguageSelector from '../../common/LanguageSelector/LanguageSelector';
 import './MobileMenu.css';
 
 export const MobileMenu = ({ isOpen, onClose }) => {
+  const { t } = useLanguage();
   if (!isOpen) return null;
 
-  const allLinks = [...mainNavLinks, ...moreCategoryLinks];
+  const allLinks = [
+    { name: t('home'), path: '/' },
+    { name: t('national'), path: '/category/national' },
+    { name: t('politics'), path: '/category/politics' },
+    { name: t('hillTracts'), path: '/category/hill-tracts' },
+    { name: t('scienceTech'), path: '/category/science-tech' },
+    { name: t('education'), path: '/category/education' },
+    { name: t('world'), path: '/category/world' },
+    { name: t('economy'), path: '/category/economy' },
+    { name: t('sports'), path: '/category/sports' },
+    { name: t('entertainment'), path: '/category/entertainment' },
+    { name: t('lifestyle'), path: '/category/lifestyle' },
+  ];
 
   return (
     <div className="mobile-menu-overlay" onClick={onClose}>
@@ -23,8 +37,12 @@ export const MobileMenu = ({ isOpen, onClose }) => {
           </button>
         </div>
 
+        <div className="mobile-menu-lang-section">
+          <LanguageSelector />
+        </div>
+
         <div className="mobile-menu-body">
-          <h4 className="mobile-menu-title">Categories</h4>
+          <h4 className="mobile-menu-title">{t('categories')}</h4>
           <ul className="mobile-nav-list">
             {allLinks.map((link) => (
               <li key={link.path}>

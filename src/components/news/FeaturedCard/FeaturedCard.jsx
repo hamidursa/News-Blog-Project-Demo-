@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../../../context/LanguageContext';
 import CategoryBadge from '../CategoryBadge/CategoryBadge';
 import Icon from '../../common/Icon/Icon';
 import './FeaturedCard.css';
 
 export const FeaturedCard = ({ article }) => {
+  const { translateArticle } = useLanguage();
   if (!article) return null;
 
+  const translated = translateArticle(article);
   const {
     slug,
     title,
@@ -18,7 +21,7 @@ export const FeaturedCard = ({ article }) => {
     publishDate,
     readingTime,
     authorName
-  } = article;
+  } = translated;
 
   return (
     <article className="featured-card">

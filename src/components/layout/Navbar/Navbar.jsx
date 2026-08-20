@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { mainNavLinks, moreCategoryLinks } from '../../../data/navigation';
 import { siteConfig } from '../../../data/siteConfig';
 import { getFormattedCurrentDate } from '../../../utils/formatDate';
 import { useSearch } from '../../../context/SearchContext';
+import { useLanguage } from '../../../context/LanguageContext';
 import Icon from '../../common/Icon/Icon';
+import LanguageSelector from '../../common/LanguageSelector/LanguageSelector';
 import MobileMenu from '../MobileMenu/MobileMenu';
 import './Navbar.css';
 
@@ -13,9 +14,27 @@ export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [localQuery, setLocalQuery] = useState('');
   const { isSearchOpen, toggleSearch, handleSearch } = useSearch();
+  const { t } = useLanguage();
   const navigate = useNavigate();
 
   const currentDate = getFormattedCurrentDate();
+
+  const navLinks = [
+    { name: t('home'), path: '/' },
+    { name: t('national'), path: '/category/national' },
+    { name: t('politics'), path: '/category/politics' },
+    { name: t('hillTracts'), path: '/category/hill-tracts' },
+    { name: t('scienceTech'), path: '/category/science-tech' },
+    { name: t('education'), path: '/category/education' },
+    { name: t('world'), path: '/category/world' },
+  ];
+
+  const moreLinks = [
+    { name: t('economy'), path: '/category/economy' },
+    { name: t('sports'), path: '/category/sports' },
+    { name: t('entertainment'), path: '/category/entertainment' },
+    { name: t('lifestyle'), path: '/category/lifestyle' },
+  ];
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
@@ -36,20 +55,22 @@ export const Navbar = () => {
           </div>
 
           <div className="top-bar-center">
-            <span className="live-tag">LIVE</span>
-            <span className="top-headline-text">Independent Editorial Reporting & In-depth Analysis</span>
+            <span className="live-tag">{t('live')}</span>
+            <span className="top-headline-text">{t('topHeadline')}</span>
           </div>
 
-          <div className="top-bar-socials">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <Icon name="facebook" />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <Icon name="twitter" />
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-              <Icon name="youtube" />
-            </a>
+          <div className="top-bar-right">
+            <div className="top-bar-socials">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <Icon name="facebook" />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <Icon name="twitter" />
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <Icon name="youtube" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -73,7 +94,7 @@ export const Navbar = () => {
 
           {/* Desktop Navigation Links */}
           <ul className="desktop-nav-links">
-            {mainNavLinks.map((link) => (
+            {navLinks.map((link) => (
               <li key={link.path} className="nav-item">
                 <NavLink
                   to={link.path}
@@ -92,13 +113,13 @@ export const Navbar = () => {
                 onClick={() => setIsMoreOpen(prev => !prev)}
                 onBlur={() => setTimeout(() => setIsMoreOpen(false), 200)}
               >
-                <span>More</span>
+                <span>{t('more')}</span>
                 <Icon name="chevronDown" className={`dropdown-icon ${isMoreOpen ? 'open' : ''}`} />
               </button>
 
               {isMoreOpen && (
                 <ul className="dropdown-menu">
-                  {moreCategoryLinks.map((link) => (
+                  {moreLinks.map((link) => (
                     <li key={link.path}>
                       <Link to={link.path} className="dropdown-link">
                         {link.name}
@@ -110,17 +131,19 @@ export const Navbar = () => {
             </li>
           </ul>
 
-          {/* Search Toggle & Search Bar */}
+          {/* Actions: Search & Language Selector */}
           <div className="navbar-actions">
+            <LanguageSelector />
+
             <form onSubmit={handleSearchSubmit} className={`inline-search-form ${isSearchOpen ? 'open' : ''}`}>
               <input
                 type="text"
-                placeholder="Search news..."
+                placeholder={t('searchPlaceholder')}
                 value={localQuery}
                 onChange={(e) => setLocalQuery(e.target.value)}
                 className="inline-search-input"
               />
-              <button type="submit" className="search-submit-btn" aria-label="Search">
+              <button type="submit" className="search-submit-btn" aria-label={t('searchButton')}>
                 <Icon name="search" />
               </button>
             </form>

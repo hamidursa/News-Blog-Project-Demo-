@@ -1,15 +1,26 @@
 import { articles } from '../data/articles';
 
+const parseViews = (str) => {
+  if (!str) return 0;
+  let num = parseFloat(str.replace(/[^0-9.]/g, '')) || 0;
+  if (str.includes('K') || str.includes('k') || str.includes('হাজার')) {
+    num *= 1000;
+  }
+  return num;
+};
+
 export const articleService = {
   getAll: () => [...articles],
   
   getBySlug: (slug) => {
-    return articles.find(article => article.slug === slug) || null;
+    if (!slug) return null;
+    return articles.find(article => article.slug.toLowerCase() === slug.toLowerCase()) || null;
   },
 
   getByCategory: (categorySlug) => {
     if (!categorySlug || categorySlug === 'all') return [...articles];
-    return articles.filter(article => article.categorySlug === categorySlug);
+    const cleanSlug = categorySlug.toLowerCase().trim();
+    return articles.filter(article => article.categorySlug.toLowerCase() === cleanSlug);
   },
 
   getHeroArticle: () => {
@@ -29,11 +40,19 @@ export const articleService = {
   },
 
   getMostRead: (limit = 6) => {
-    return [...articles].sort((a, b) => parseFloat(b.viewCount) - parseFloat(a.viewCount)).slice(0, limit);
+    return [...articles]
+      .sort((a, b) => parseViews(b.viewCount) - parseViews(a.viewCount))
+      .slice(0, limit);
+  },
+
+  getLatest: (limit = 12) => {
+    return [...articles].slice(0, limit);
   },
 
   getEditorPicks: (limit = 4) => {
-    return articles.slice(2, 2 + limit);
+    // Pick diverse featured/trending articles across different categories
+    const picks = articles.filter(a => a.isFeatured && !a.isHero);
+    return picks.length >= limit ? picks.slice(1, 1 + limit) : articles.slice(3, 3 + limit);
   },
 
   getRelated: (currentArticleId, categorySlug, limit = 3) => {
@@ -49,7 +68,10 @@ export const articleService = {
       article.title.toLowerCase().includes(q) ||
       article.excerpt.toLowerCase().includes(q) ||
       article.category.toLowerCase().includes(q) ||
+      (article.topic && article.topic.toLowerCase().includes(q)) ||
       (article.tags && article.tags.some(t => t.toLowerCase().includes(q)))
     );
   }
 };
+
+export default articleService;

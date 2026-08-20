@@ -14,11 +14,13 @@ const Home = () => {
   const heroArticle = articleService.getHeroArticle();
   const sideArticles = articleService.getFeatured(2);
   const breakingNews = articleService.getBreaking();
-  const latestArticles = articleService.getAll().slice(0, 9);
+  const allArticles = articleService.getAll();
   const trendingArticles = articleService.getTrending(5);
   const hillTractsArticles = articleService.getByCategory('hill-tracts');
   const banglaArticles = articleService.getByCategory('politics');
   const nationalArticles = articleService.getByCategory('national');
+  const techArticles = articleService.getByCategory('science-tech');
+  const sportsArticles = articleService.getByCategory('sports');
   const editorPicksArticles = articleService.getEditorPicks(4);
 
   return (
@@ -27,22 +29,33 @@ const Home = () => {
       <HeroSection heroArticle={heroArticle} sideArticles={sideArticles} />
       <AdBanner slot="leaderboard" />
       <TrendingSection articles={trendingArticles} />
-      <LatestNews articles={latestArticles} />
+      <LatestNews articles={allArticles} />
       <CategorySection
         title="Hill Districts"
         categorySlug="hill-tracts"
         articles={hillTractsArticles}
       />
       <CategorySection
-        title="বাংলা রাজনীতি"
+        title="বাংলা রাজনীতি ও প্রশাসন"
         categorySlug="politics"
         articles={banglaArticles}
         dark={true}
       />
       <CategorySection
-        title="National Affairs"
+        title="Science & Tech Innovations"
+        categorySlug="science-tech"
+        articles={techArticles}
+      />
+      <CategorySection
+        title="National & Public Affairs"
         categorySlug="national"
         articles={nationalArticles}
+      />
+      <CategorySection
+        title="Sports Arena"
+        categorySlug="sports"
+        articles={sportsArticles}
+        dark={true}
       />
       <EditorPicks articles={editorPicksArticles} />
       <div className="newsletter-section">

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { articleService } from '../../services/articleService';
+import { categories } from '../../data/categories';
 import NewsCard from '../../components/news/NewsCard/NewsCard';
 import EmptyState from '../../components/common/EmptyState/EmptyState';
 import Icon from '../../components/common/Icon/Icon';
 import './Search.css';
 
-const SUGGESTED = ['Politics', 'Hill Tracts', 'National', 'Boishabi', 'Economy', 'Cricket'];
+const SUGGESTED = ['Politics', 'Hill Tracts', 'National', 'AI', 'Economy', 'Cricket', 'Education', 'Metro Rail'];
 
 const Search = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -42,14 +43,14 @@ const Search = () => {
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search for news, topics, regions..."
+                placeholder="Search for news, topics, regions, tech..."
                 className="search-main-input"
               />
               <button type="submit" className="search-main-btn">Search</button>
             </div>
           </form>
           <div className="search-suggestions-bar">
-            <span>Trending:</span>
+            <span>Trending Topics:</span>
             {SUGGESTED.map((s) => (
               <button key={s} className="suggestion-chip" onClick={() => setSearchParams({ q: s })}>
                 {s}
@@ -81,23 +82,21 @@ const Search = () => {
         {queryParam && results.length === 0 && (
           <EmptyState
             title="No Results Found"
-            message={`We couldn't find articles matching "${queryParam}". Try a different keyword or browse categories below.`}
+            message={`We couldn't find articles matching "${queryParam}". Try a different keyword or browse our editorial categories below.`}
             icon="search"
           />
         )}
 
-        {!queryParam && (
-          <div className="search-browse-prompt">
-            <p>Start typing to search across all articles. Or browse by category:</p>
-            <div className="browse-category-chips">
-              {['National', 'Politics', 'Hill Districts', 'Science & Tech', 'Economy', 'Sports'].map((cat) => (
-                <Link key={cat} to={`/category/${cat.toLowerCase().replace(/ & /g, '-').replace(' ', '-')}`} className="browse-chip">
-                  {cat}
-                </Link>
-              ))}
-            </div>
+        <div className="search-browse-prompt">
+          <p>Browse news by editorial category:</p>
+          <div className="browse-category-chips">
+            {categories.map((cat) => (
+              <Link key={cat.slug} to={`/category/${cat.slug}`} className="browse-chip">
+                {cat.name}
+              </Link>
+            ))}
           </div>
-        )}
+        </div>
       </div>
     </div>
   );
